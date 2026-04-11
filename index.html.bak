@@ -686,72 +686,29 @@ nav.scrolled {
 }
 
 .skill-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skill-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-
-.skill-item-name {
   font-family: 'Syne', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
   color: #b0b0b0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   transition: color 0.3s var(--ease);
 }
 
-.skill-block:hover .skill-item-name {
+.skill-block:hover .skill-item {
   color: #ffffff;
 }
 
-.skill-item-percentage {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  font-weight: 600;
+.skill-item::before {
+  content: '▸';
   color: #00d9ff;
-  min-width: 40px;
-  text-align: right;
+  font-size: 0.8rem;
+  flex-shrink: 0;
 }
 
-.skill-progress {
-  width: 100%;
-  height: 6px;
-  background: rgba(0, 217, 255, 0.1);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.skill-progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #00d9ff, #00f0ff);
-  border-radius: 3px;
-  width: 0%;
-  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              box-shadow 0.3s var(--ease);
-  box-shadow: 0 0 12px rgba(0, 217, 255, 0.3);
-}
-
-.skill-block.visible .skill-progress-bar {
-  animation: fillProgress 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.skill-block:hover .skill-progress-bar {
-  box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
-}
-
-@keyframes fillProgress {
-  from { width: 0%; }
-  to { width: var(--progress-width); }
-}
-
-.skill-item.primary .skill-item-name { color: #ffffff; }
-.skill-item.learning .skill-item-name { color: rgba(0, 217, 255, 0.6); font-style: italic; }
+.skill-item.primary { color: #ffffff; }
+.skill-item.learning { color: rgba(0, 217, 255, 0.6); font-style: italic; }
 
 /* ── PROJECTS ───────────────────────────────────────────── */
 .projects {
@@ -1454,42 +1411,10 @@ footer {
         <div class="skill-block-num">01</div>
         <div class="skill-block-title">Mobile Development</div>
         <ul class="skill-block-list">
-          <li class="skill-item primary">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Flutter (Dart)</span>
-              <span class="skill-item-percentage">95%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 95%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Cross-platform iOS & Android</span>
-              <span class="skill-item-percentage">92%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 92%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Material Design 3</span>
-              <span class="skill-item-percentage">88%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 88%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Responsive UI/UX</span>
-              <span class="skill-item-percentage">90%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 90%;"></div>
-            </div>
-          </li>
+          <li class="skill-item primary">Flutter (Dart)</li>
+          <li class="skill-item">Cross-platform iOS & Android</li>
+          <li class="skill-item">Material Design 3</li>
+          <li class="skill-item">Responsive UI/UX</li>
         </ul>
       </div>
 
@@ -1497,33 +1422,10 @@ footer {
         <div class="skill-block-num">02</div>
         <div class="skill-block-title">State Management</div>
         <ul class="skill-block-list">
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">BLoC + Equatable + Freezed</span>
-              <span class="skill-item-percentage">94%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 94%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">GetX</span>
-              <span class="skill-item-percentage">85%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 85%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Provider</span>
-              <span class="skill-item-percentage">80%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 80%;"></div>
-            </div>
-          </li>
+          <li class="skill-item">BLoC + Equatable + Freezed</li>
+          <li class="skill-item">GetX</li>
+          <li class="skill-item">Provider</li>
+        </ul>
         </ul>
       </div>
 
@@ -1531,42 +1433,10 @@ footer {
         <div class="skill-block-num">03</div>
         <div class="skill-block-title">Backend & Database</div>
         <ul class="skill-block-list">
-          <li class="skill-item primary">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Firebase Auth + Firestore</span>
-              <span class="skill-item-percentage">93%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 93%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Supabase</span>
-              <span class="skill-item-percentage">82%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 82%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">REST API Integration</span>
-              <span class="skill-item-percentage">91%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 91%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Hive (Local Storage)</span>
-              <span class="skill-item-percentage">87%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 87%;"></div>
-            </div>
-          </li>
+          <li class="skill-item primary">Firebase Auth + Firestore</li>
+          <li class="skill-item">Supabase</li>
+          <li class="skill-item">REST API Integration</li>
+          <li class="skill-item">Hive (Local Storage)</li>
         </ul>
       </div>
 
@@ -1574,42 +1444,10 @@ footer {
         <div class="skill-block-num">04</div>
         <div class="skill-block-title">AI & Emerging Tech</div>
         <ul class="skill-block-list">
-          <li class="skill-item primary">
-            <div class="skill-item-header">
-              <span class="skill-item-name">OpenAI API Integration</span>
-              <span class="skill-item-percentage">86%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 86%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Google ML Kit</span>
-              <span class="skill-item-percentage">79%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 79%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">AI App Architecture</span>
-              <span class="skill-item-percentage">81%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 81%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Prompt Engineering</span>
-              <span class="skill-item-percentage">84%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 84%;"></div>
-            </div>
-          </li>
+          <li class="skill-item primary">OpenAI API Integration</li>
+          <li class="skill-item">Google ML Kit</li>
+          <li class="skill-item">AI App Architecture</li>
+          <li class="skill-item">Prompt Engineering</li>
         </ul>
       </div>
 
@@ -1617,42 +1455,10 @@ footer {
         <div class="skill-block-num">05</div>
         <div class="skill-block-title">Dev Practices</div>
         <ul class="skill-block-list">
-          <li class="skill-item primary">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Clean Architecture</span>
-              <span class="skill-item-percentage">92%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 92%;"></div>
-            </div>
-          </li>
-          <li class="skill-item primary">
-            <div class="skill-item-header">
-              <span class="skill-item-name">SOLID Principles</span>
-              <span class="skill-item-percentage">89%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 89%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Git & GitHub</span>
-              <span class="skill-item-percentage">88%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 88%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Agile / Scrum</span>
-              <span class="skill-item-percentage">83%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 83%;"></div>
-            </div>
-          </li>
+          <li class="skill-item primary">Clean Architecture</li>
+          <li class="skill-item">SOLID Principles</li>
+          <li class="skill-item">Git & GitHub</li>
+          <li class="skill-item">Agile / Scrum</li>
         </ul>
       </div>
 
@@ -1660,42 +1466,10 @@ footer {
         <div class="skill-block-num">06</div>
         <div class="skill-block-title">Languages</div>
         <ul class="skill-block-list">
-          <li class="skill-item primary">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Dart — Primary</span>
-              <span class="skill-item-percentage">96%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 96%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">Java</span>
-              <span class="skill-item-percentage">78%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 78%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">C++</span>
-              <span class="skill-item-percentage">75%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 75%;"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-item-name">English & Urdu — Fluent</span>
-              <span class="skill-item-percentage">98%</span>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress-bar" style="--progress-width: 98%;"></div>
-            </div>
-          </li>
+          <li class="skill-item primary">Dart — Primary</li>
+          <li class="skill-item">Java</li>
+          <li class="skill-item">C++</li>
+          <li class="skill-item">English & Urdu — Fluent</li>
         </ul>
       </div>
     </div>
