@@ -20,27 +20,38 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 
 /* ── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --bg:          #111009;
-  --bg-2:        #161410;
-  --bg-3:        #1c1a14;
-  --surface:     #201e17;
-  --surface-2:   #272420;
+  /* ─── BACKGROUND COLORS ─────────────────────────── */
+  --bg:           #0a0e27;        /* Deep navy base */
+  --bg-2:         #0f1436;        /* Slightly lighter navy */
+  --bg-3:         #151d42;        /* Navy with more depth */
+  --surface:      #1a2354;        /* Primary surface */
+  --surface-2:    #232f52;        /* Secondary surface */
+  --surface-3:    #2a3860;        /* Tertiary surface */
+  
+  /* ─── ACCENT COLORS ─────────────────────────────── */
+  --gold:         #00d9ff;        /* Vibrant cyan */
+  --gold-light:   #00f0ff;        /* Bright cyan */
+  --gold-dim:     rgba(0, 217, 255, 0.12);
+  --gold-border:  rgba(0, 217, 255, 0.18);
+  --accent-2:     #7c3aed;        /* Rich purple */
+  --accent-3:     #06b6d4;        /* Teal accent */
+  
+  /* ─── TEXT COLORS ────────────────────────────────– */
+  --cream:        #f0f9ff;        /* Bright white-blue */
+  --cream-muted:  #94a3b8;        /* Muted slate */
+  --cream-faint:  #64748b;        /* Faint slate */
+  
+  /* ─── GLOWS ─────────────────────────────────────– */
+  --glow-cyan:    rgba(0, 217, 255, 0.25);
+  --glow-purple:  rgba(124, 58, 237, 0.2);
+  
+  /* ─── FONTS ─────────────────────────────────────– */
+  --font-serif:   'Jost', sans-serif;
+  --font-fell:    'Jost', sans-serif;
+  --font-sans:    'Jost', sans-serif;
 
-  --gold:        #c9a84c;
-  --gold-light:  #e2c97e;
-  --gold-dim:    rgba(201,168,76,0.15);
-  --gold-border: rgba(201,168,76,0.22);
-
-  --cream:       #f0e8d8;
-  --cream-muted: #a89f8c;
-  --cream-faint: #5c5649;
-
-  --font-serif:  'Cormorant Garamond', Georgia, serif;
-  --font-fell:   'IM Fell English', Georgia, serif;
-  --font-sans:   'Jost', sans-serif;
-
-  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ── BASE ───────────────────────────────────────────────── */
