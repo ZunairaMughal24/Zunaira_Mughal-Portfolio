@@ -20,34 +20,28 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 
 /* ── TOKENS ─────────────────────────────────────────────── */
 :root {
-  /* ─── BACKGROUND COLORS ─────────────────────────── */
-  --bg:           #0f1419;        /* Very dark base */
-  --bg-2:         #131820;        /* Slightly lighter */
-  --bg-3:         #191f2e;        /* Warmth added */
+  /* ─── BACKGROUNDS ────────────────────────────── */
+  --bg:           #0a0a0a;        /* Pure black base */
+  --bg-2:         #121212;        /* Slightly lighter */
+  --bg-3:         #1a1a1a;        /* Tertiary bg */
   
-  /* ─── ACCENT COLORS ─────────────────────────────── */
-  --gold:         #8b5cf6;        /* Soft purple */
-  --gold-light:   #a78bfa;        /* Light purple */
-  --gold-dim:     rgba(139, 92, 246, 0.12);
-  --gold-border:  rgba(139, 92, 246, 0.15);
-  --accent-2:     #3b82f6;        /* Soft blue */
-  --accent-3:     #06b6d4;        /* Cyan accent */
+  /* ─── ACCENT (Single Color) ─────────────────── */
+  --gold:         #00d9ff;        /* Bright cyan */
+  --gold-light:   #00f0ff;        /* Lighter cyan */
+  --gold-dim:     rgba(0, 217, 255, 0.1);
+  --gold-border:  rgba(0, 217, 255, 0.2);
   
-  /* ─── TEXT COLORS ────────────────────────────────– */
-  --cream:        #f8fafc;        /* Off-white */
-  --cream-muted:  #cbd5e1;        /* Muted gray */
-  --cream-faint:  #94a3b8;        /* Faint gray */
+  /* ─── TEXT COLORS ────────────────────────────– */
+  --cream:        #ffffff;        /* Pure white */
+  --cream-muted:  #b0b0b0;        /* Muted gray */
+  --cream-faint:  #808080;        /* Faint gray */
   
-  /* ─── GLOWS ─────────────────────────────────────– */
-  --glow-cyan:    rgba(139, 92, 246, 0.15);
-  --glow-purple:  rgba(59, 130, 246, 0.12);
-  
-  /* ─── FONTS ─────────────────────────────────────– */
-  --font-serif:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-fell:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* ─── FONTS ─────────────────────────────────– */
+  --font-serif:   'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-fell:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
 }
 
