@@ -33,9 +33,9 @@
   --error:        #ef4444;        /* Red */
   
   /* ─── TYPOGRAPHY ───────────────────────────– */
-  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono:    'JetBrains Mono', 'Monaco', monospace;
-  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+  --font-body:    'Syne', sans-serif;
   
   /* ─── SPACING ────────────────────────────────– */
   --section-gap:  100px;
