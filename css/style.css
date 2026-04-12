@@ -25,6 +25,28 @@
   --transition: 0.2s ease;
 }
 
+/* ── ICON STYLING ── */
+.highlight-icon i,
+.skill-icon i,
+.service-icon i,
+.contact-icon i,
+.project-fa {
+  color: var(--accent);
+}
+
+.project-fa {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 10px rgba(231, 106, 56, 0.3));
+}
+
+.service-icon i {
+  font-size: 2rem;
+}
+
+.contact-icon i {
+  font-size: 1.25rem;
+}
+
 /* ── RESET & BASE ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -75,7 +97,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem 6%;
-  background: rgba(10, 10, 15, 0.85);
+  background: rgba(26, 24, 21, 0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: background var(--transition);
@@ -200,12 +222,12 @@ section {
   font-weight: 600;
   font-size: 0.95rem;
   transition: transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 0 30px rgba(124, 92, 252, 0.3);
+  box-shadow: 0 0 30px rgba(231, 106, 56, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(124, 92, 252, 0.5);
+  box-shadow: 0 0 40px rgba(231, 106, 56, 0.5);
 }
 
 .btn-outline {
@@ -252,7 +274,7 @@ section {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(124, 92, 252, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(231, 106, 56, 0.18) 0%, transparent 70%);
   top: -100px;
   right: -100px;
   pointer-events: none;
@@ -262,7 +284,7 @@ section {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(231, 106, 56, 0.1) 0%, transparent 70%);
   bottom: 0;
   left: 10%;
   pointer-events: none;
@@ -284,8 +306,8 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(124, 92, 252, 0.12);
-  border: 1px solid rgba(124, 92, 252, 0.3);
+  background: rgba(231, 106, 56, 0.12);
+  border: 1px solid rgba(231, 106, 56, 0.3);
   border-radius: var(--radius-xl);
   padding: 0.4rem 1rem;
   font-size: 0.82rem;
@@ -353,8 +375,8 @@ section {
   justify-content: center;
   animation: float 6s ease-in-out infinite, fadeUp 0.8s 0.2s ease both;
   position: relative;
-  border: 2px solid rgba(124, 92, 252, 0.3);
-  box-shadow: 0 0 40px rgba(124, 92, 252, 0.2);
+  border: 2px solid rgba(231, 106, 56, 0.3);
+  box-shadow: 0 0 40px rgba(231, 106, 56, 0.2);
 }
 
 /* When you add a real photo, this styles the img tag inside hero-img */
@@ -507,7 +529,7 @@ section {
 }
 
 .exp-card {
-  background: linear-gradient(135deg, var(--card) 0%, rgba(124, 92, 252, 0.05) 100%);
+  background: linear-gradient(135deg, var(--card) 0%, rgba(231, 106, 56, 0.05) 100%);
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
   border-radius: var(--radius-lg);
@@ -536,7 +558,7 @@ section {
   border-color: var(--accent);
   border-left-color: var(--accent2);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(124, 92, 252, 0.15);
+  box-shadow: 0 12px 40px rgba(231, 106, 56, 0.15);
 }
 
 .exp-card:hover::before {
@@ -553,7 +575,7 @@ section {
   justify-content: center;
   font-size: 1.5rem;
   flex-shrink: 0;
-  box-shadow: 0 0 20px rgba(124, 92, 252, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(231, 106, 56, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -581,8 +603,8 @@ section {
 }
 
 .exp-company {
-  background: rgba(192, 132, 252, 0.15);
-  border: 1px solid rgba(192, 132, 252, 0.3);
+  background: rgba(255, 140, 66, 0.15);
+  border: 1px solid rgba(255, 140, 66, 0.3);
   color: var(--accent2);
   font-weight: 600;
   padding: 0.3rem 1rem;
@@ -591,8 +613,8 @@ section {
 }
 
 .exp-date {
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.15), rgba(192, 132, 252, 0.08));
-  border: 1px solid rgba(124, 92, 252, 0.35);
+  background: linear-gradient(135deg, rgba(231, 106, 56, 0.15), rgba(255, 140, 66, 0.08));
+  border: 1px solid rgba(231, 106, 56, 0.35);
   color: var(--accent2);
   padding: 0.35rem 1rem;
   border-radius: var(--radius-xl);
@@ -639,8 +661,8 @@ section {
 }
 
 .exp-projects-stat {
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.08), rgba(192, 132, 252, 0.04));
-  border: 1px solid rgba(124, 92, 252, 0.25);
+  background: linear-gradient(135deg, rgba(231, 106, 56, 0.08), rgba(255, 140, 66, 0.04));
+  border: 1px solid rgba(231, 106, 56, 0.25);
   border-radius: var(--radius-md);
   padding: 2rem 1.5rem;
   margin-bottom: 1.5rem;
@@ -686,7 +708,7 @@ section {
   content: '';
   position: absolute;
   inset: -50px;
-  background: radial-gradient(circle at 20% 50%, rgba(124, 92, 252, 0.08) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(231, 106, 56, 0.08) 0%, transparent 50%);
   filter: blur(40px);
   pointer-events: none;
   animation: floatBg 15s ease-in-out infinite;
@@ -696,15 +718,15 @@ section {
   content: '';
   position: absolute;
   inset: -50px;
-  background: radial-gradient(circle at 80% 50%, rgba(192, 132, 252, 0.08) 0%, transparent 50%);
+  background: radial-gradient(circle at 80% 50%, rgba(255, 140, 66, 0.08) 0%, transparent 50%);
   filter: blur(40px);
   pointer-events: none;
   animation: floatBg 18s ease-in-out infinite reverse;
 }
 
 .exp-stat-card {
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.1), rgba(192, 132, 252, 0.05));
-  border: 1px solid rgba(124, 92, 252, 0.25);
+  background: linear-gradient(135deg, rgba(231, 106, 56, 0.1), rgba(255, 140, 66, 0.05));
+  border: 1px solid rgba(231, 106, 56, 0.25);
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
   text-align: center;
@@ -722,7 +744,7 @@ section {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(124, 92, 252, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(231, 106, 56, 0.2) 0%, transparent 70%);
   opacity: 0;
   transition: opacity var(--transition);
   animation: rotateBg 20s linear infinite;
@@ -732,7 +754,7 @@ section {
   content: '';
   position: absolute;
   inset: 1px;
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.05), rgba(192, 132, 252, 0.02));
+  background: linear-gradient(135deg, rgba(231, 106, 56, 0.05), rgba(255, 140, 66, 0.02));
   border-radius: calc(var(--radius-lg) - 1px);
   pointer-events: none;
   opacity: 0;
@@ -747,8 +769,8 @@ section {
 .exp-stat-card:hover {
   border-color: var(--accent);
   transform: translateY(-8px) scale(1.08);
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.15), rgba(192, 132, 252, 0.1));
-  box-shadow: 0 16px 40px rgba(124, 92, 252, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(231, 106, 56, 0.15), rgba(255, 140, 66, 0.1));
+  box-shadow: 0 16px 40px rgba(231, 106, 56, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .exp-stat-card:hover::before {
@@ -881,12 +903,12 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.2), rgba(192, 132, 252, 0.1));
+  background: linear-gradient(135deg, rgba(231, 106, 56, 0.2), rgba(255, 140, 66, 0.1));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  border: 1px solid rgba(124, 92, 252, 0.2);
+  border: 1px solid rgba(231, 106, 56, 0.2);
   flex-shrink: 0;
 }
 
@@ -934,7 +956,7 @@ section {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 3px;
   overflow: hidden;
-  border: 1px solid rgba(124, 92, 252, 0.15);
+  border: 1px solid rgba(231, 106, 56, 0.15);
 }
 
 .skill-bar-fill {
@@ -943,7 +965,7 @@ section {
   background: linear-gradient(90deg, var(--accent), var(--accent2));
   border-radius: 2px;
   transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 10px rgba(124, 92, 252, 0.4);
+  box-shadow: 0 0 10px rgba(231, 106, 56, 0.4);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -981,11 +1003,11 @@ section {
   font-size: 3.5rem;
 }
 
-.thumb-blue   { background: linear-gradient(135deg, #0f2027, #1a3a4a); }
-.thumb-purple { background: linear-gradient(135deg, #1a0f2e, #2d1b69); }
-.thumb-green  { background: linear-gradient(135deg, #0d1f12, #1a3a22); }
-.thumb-sky    { background: linear-gradient(135deg, #0d1a2e, #0a3050); }
-.thumb-violet { background: linear-gradient(135deg, #1f0a2e, #3d1463); }
+.thumb-blue   { background: linear-gradient(135deg, #2b1d12, #472f1e); }
+.thumb-purple { background: linear-gradient(135deg, #301a0d, #522d16); }
+.thumb-green  { background: linear-gradient(135deg, #1a1e12, #2d331a); }
+.thumb-sky    { background: linear-gradient(135deg, #3d2b1a, #5c3b28); }
+.thumb-violet { background: linear-gradient(135deg, #33140a, #592211); }
 
 .project-body {
   padding: 1.5rem;
@@ -999,8 +1021,8 @@ section {
 }
 
 .stack-tag {
-  background: rgba(124, 92, 252, 0.1);
-  border: 1px solid rgba(124, 92, 252, 0.2);
+  background: rgba(231, 106, 56, 0.1);
+  border: 1px solid rgba(231, 106, 56, 0.2);
   color: var(--accent2);
   padding: 0.2rem 0.65rem;
   border-radius: var(--radius-xl);
@@ -1076,7 +1098,7 @@ section {
   font-family: 'Cinzel', serif;
   font-size: 2.6rem;
   font-weight: 700;
-  color: rgba(124, 92, 252, 0.12);
+  color: rgba(231, 106, 56, 0.12);
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -1136,7 +1158,7 @@ section {
   background: var(--accent3);
   margin-top: 0.4rem;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 10px rgba(231, 106, 56, 0.5);
 }
 
 .learning-item p {
@@ -1189,8 +1211,8 @@ section {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(124, 92, 252, 0.1);
-  border: 1px solid rgba(124, 92, 252, 0.2);
+  background: rgba(231, 106, 56, 0.1);
+  border: 1px solid rgba(231, 106, 56, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1278,7 +1300,7 @@ section {
 
 .form-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(124, 92, 252, 0.4);
+  box-shadow: 0 0 30px rgba(231, 106, 56, 0.4);
 }
 
 /* ═══════════════════════════════════════════════════════
