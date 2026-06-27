@@ -14,7 +14,7 @@
   --accent2:  #ff8c42;
   --accent3:  #d4a5a0;
   --text:     #f5ede8;
-  --muted:    #a89a8f;
+  --muted:    #b8aca2;
   --white:    #ffffff;
 
   --radius-sm:  0px;
@@ -123,7 +123,7 @@ nav {
 
 .nav-links a {
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: color var(--transition);
@@ -191,18 +191,18 @@ section {
 
 .section-title {
   font-family: 'Cinzel', serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 600;
   color: var(--white);
   letter-spacing: 0px;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 1rem;
 }
 
 .section-sub {
   color: var(--muted);
   max-width: 560px;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 3rem;
 }
 
@@ -232,7 +232,7 @@ section {
 
 .btn-outline {
   display: inline-block;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(231, 106, 56, 0.35);
   color: var(--text);
   padding: 0.8rem 1.8rem;
   border-radius: var(--radius-xl);
@@ -465,7 +465,7 @@ section {
 .about-text p {
   color: var(--muted);
   margin-bottom: 1rem;
-  font-size: 1.02rem;
+  font-size: 1.1rem;
 }
 
 .about-text p strong {
@@ -505,17 +505,17 @@ section {
 }
 
 .highlight-card h4 {
-  font-family: 'Cinzel', serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   margin-bottom: 0.3rem;
 }
 
 .highlight-card p {
   color: var(--muted);
-  font-size: 0.83rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -613,7 +613,7 @@ section {
 }
 
 .exp-stat-num {
-  font-family: 'Geologica', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 3rem;
   font-weight: 600;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -633,8 +633,8 @@ section {
 }
 
 .exp-stat-label {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
   color: var(--muted);
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -744,17 +744,17 @@ section {
 }
 
 .skill-card-header h4 {
-  font-family: 'Cinzel', serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--white);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 .skill-percentage {
-  font-family: 'Geologica', sans-serif;
-  font-weight: 600;
-  font-size: 1.3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.45rem;
   color: var(--accent);
   min-width: 50px;
   text-align: right;
@@ -773,8 +773,8 @@ section {
   color: var(--muted);
   padding: 0.3rem 0.8rem;
   border-radius: var(--radius-xl);
-  font-size: 0.8rem;
-  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
 }
 
@@ -855,29 +855,29 @@ section {
   background: rgba(231, 106, 56, 0.1);
   border: 1px solid rgba(231, 106, 56, 0.2);
   color: var(--accent2);
-  padding: 0.2rem 0.65rem;
+  padding: 0.2rem 0.7rem;
   border-radius: var(--radius-xl);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 500;
 }
 
 .project-body h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--white);
   margin-bottom: 0.6rem;
 }
 
 .project-body p {
   color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .project-date {
   color: var(--accent);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -940,16 +940,16 @@ section {
 }
 
 .service-card h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--white);
   margin-bottom: 0.7rem;
 }
 
 .service-card p {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   line-height: 1.65;
 }
 
@@ -994,8 +994,8 @@ section {
 
 .learning-item p {
   color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -1015,7 +1015,7 @@ section {
 
 .contact-info h3 {
   font-family: 'Syne', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 1rem;
@@ -1023,6 +1023,7 @@ section {
 
 .contact-info > p {
   color: var(--muted);
+  font-size: 1.05rem;
   margin-bottom: 2rem;
 }
 
