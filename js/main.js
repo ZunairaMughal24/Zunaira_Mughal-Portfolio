@@ -26,7 +26,7 @@ const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-    navbar.style.background = 'rgba(26, 24, 21, 0.97)';
+    navbar.style.background = 'rgba(10, 10, 11, 0.97)';
   } else {
     navbar.style.background = '';
   }
