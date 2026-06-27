@@ -446,57 +446,6 @@ section {
 }
 
 
-.hero-initials {
-  font-family: 'Cinzel', serif;
-  font-size: 4rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0px;
-}
-
-/* ═══════════════════════════════════════════════════════
-   STATS BAR
-═══════════════════════════════════════════════════════ */
-
-.stats-bar {
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 2rem 6%;
-  position: relative;
-  z-index: 1;
-}
-
-.stats-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat-num {
-  font-family: 'Geologica', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1;
-}
-
-.stat-num span {
-  color: var(--accent);
-}
-
-.stat-label {
-  color: var(--muted);
-  font-size: 0.85rem;
-  margin-top: 0.3rem;
-}
 
 /* ═══════════════════════════════════════════════════════
    ABOUT
@@ -575,173 +524,6 @@ section {
 
 #experience {
   background: var(--bg);
-}
-
-.exp-card {
-  background: linear-gradient(135deg, var(--card) 0%, rgba(231, 106, 56, 0.05) 100%);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem 2.5rem 2.5rem 3rem;
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-  transition: all var(--transition), box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.exp-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.exp-card:hover {
-  border-color: var(--accent);
-  border-left-color: var(--accent2);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(231, 106, 56, 0.15);
-}
-
-.exp-card:hover::before {
-  opacity: 1;
-}
-
-.exp-dot {
-  width: 54px;
-  height: 54px;
-  border-radius: 0px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  box-shadow: 0 0 20px rgba(231, 106, 56, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.exp-info {
-  flex: 1;
-}
-
-.exp-meta {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.exp-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--white), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.exp-company {
-  background: rgba(255, 140, 66, 0.15);
-  border: 1px solid rgba(255, 140, 66, 0.3);
-  color: var(--accent2);
-  font-weight: 600;
-  padding: 0.3rem 1rem;
-  border-radius: var(--radius-xl);
-  font-size: 0.85rem;
-}
-
-.exp-date {
-  background: linear-gradient(135deg, rgba(231, 106, 56, 0.15), rgba(255, 140, 66, 0.08));
-  border: 1px solid rgba(231, 106, 56, 0.35);
-  color: var(--accent2);
-  padding: 0.35rem 1rem;
-  border-radius: var(--radius-xl);
-  font-size: 0.8rem;
-  font-weight: 600;
-  font-family: 'Geologica', sans-serif;
-  letter-spacing: 0.5px;
-}
-
-.exp-location {
-  color: var(--accent2);
-  font-size: 0.9rem;
-  margin-bottom: 1.3rem;
-  font-weight: 500;
-}
-
-.exp-list li {
-  color: var(--muted);
-  font-size: 0.95rem;
-  padding: 0.5rem 0 0.5rem 1.8rem;
-  position: relative;
-  line-height: 1.6;
-  transition: color var(--transition), padding-left var(--transition);
-}
-
-.exp-list li:hover {
-  color: var(--accent2);
-  padding-left: 2.2rem;
-}
-
-.exp-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0.2rem;
-  color: var(--accent);
-  font-weight: 700;
-  opacity: 0.7;
-  transition: opacity var(--transition), left var(--transition);
-}
-
-.exp-list li:hover::before {
-  opacity: 1;
-  left: 0;
-}
-
-.exp-projects-stat {
-  background: linear-gradient(135deg, rgba(231, 106, 56, 0.08), rgba(255, 140, 66, 0.04));
-  border: 1px solid rgba(231, 106, 56, 0.25);
-  border-radius: var(--radius-md);
-  padding: 2rem 1.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.projects-number {
-  font-family: 'Geologica', sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-}
-
-.projects-number span {
-  font-size: 2rem;
-  color: var(--accent);
-}
-
-.projects-label {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.95rem;
-  color: var(--muted);
-  font-weight: 500;
 }
 
 /* Experience Stats Grid with Animations */
@@ -1400,11 +1182,6 @@ footer a {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-18px); }
-}
-
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE — MOBILE
 ═══════════════════════════════════════════════════════ */
@@ -1477,4 +1254,39 @@ footer a {
     width: 200px;
     height: 200px;
   }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ACTIVE NAV LINK
+═══════════════════════════════════════════════════════ */
+
+.nav-links a:not(.nav-cta).active {
+  color: var(--white);
+}
+
+/* ═══════════════════════════════════════════════════════
+   TOAST NOTIFICATION
+═══════════════════════════════════════════════════════ */
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--card);
+  border: 1px solid var(--accent);
+  padding: 1rem 1.5rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  z-index: 9999;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  max-width: 360px;
+  box-shadow: 0 8px 30px rgba(231, 106, 56, 0.2);
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
 }
