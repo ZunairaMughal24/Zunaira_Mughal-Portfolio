@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zunaira Abdul Ghaffar — Flutter Developer</title>
-  <meta name="description" content="Zunaira Abdul Ghaffar — Flutter developer with 2+ years shipping cross-platform mobile apps. Experienced with BLoC, Firebase, Supabase, REST APIs, and AI integrations. Open to remote opportunities."/>
-  <meta property="og:title" content="Zunaira Abdul Ghaffar — Flutter Developer"/>
+  <title>Zunaira Mughal — Flutter Developer</title>
+  <meta name="description" content="Zunaira Mughal — Flutter developer with 2+ years shipping cross-platform mobile apps. Experienced with BLoC, Firebase, Supabase, REST APIs, and AI integrations. Open to remote opportunities."/>
+  <meta property="og:title" content="Zunaira Mughal — Flutter Developer"/>
   <meta property="og:description" content="Flutter developer building mobile apps for iOS and Android. Clean code, solid architecture, apps that actually work."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="assets/profile.jpeg"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Zunaira Abdul Ghaffar — Flutter Developer"/>
+  <meta name="twitter:title" content="Zunaira Mughal -  Flutter Developer"/>
   <meta name="twitter:description" content="Flutter developer building mobile apps for iOS and Android. Clean code, solid architecture, apps that actually work."/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e7683c'/><text x='50' y='72' font-size='65' font-family='serif' font-weight='bold' text-anchor='middle' fill='white'>Z</text></svg>"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%237c3aed'/><stop offset='100%25' stop-color='%2306b6d4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='72' font-size='65' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='white'>Z</text></svg>"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+
+  <!-- Cursor glow follower -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
   <!-- ═══════════════════════════════════════
        NAVIGATION
@@ -28,7 +32,7 @@
     <a href="#home" class="nav-logo">Zunaira<span>.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
+  
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#services">Services</a></li>
@@ -44,23 +48,91 @@
   ═══════════════════════════════════════ -->
   <section id="home">
     <div class="hero-glow"></div>
+    <div class="hero-orb-1"></div>
+    <div class="hero-orb-2"></div>
+    <div class="hero-orb-3"></div>
+    <div class="hero-orb-4"></div>
     <div class="hero-inner">
       <div class="hero-text">
         <div class="hero-badge">Open to New Opportunities</div>
-        <h1>I'm <span class="grad">Zunaira</span><br>Abdul Ghaffar</h1>
+        <h1>I'm <span class="grad"></span> <br>Zunaira Mughal</h1>
         <h2>Flutter Developer · Mobile Specialist</h2>
         <p>Flutter developer with 2+ years shipping mobile apps across healthcare, e-commerce, and productivity. I focus on clean code, solid architecture, and apps that feel right to use.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn-primary">Get in Touch</a>
+          <a href="#contact" class="btn-primary">Hire Me</a>
           <a href="#projects" class="btn-outline">See Projects</a>
+        </div>
+        <div class="hero-social-row">
+          <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer" class="hero-social-btn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer" class="hero-social-btn" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <div class="hero-social-divider"></div>
+          <a href="mailto:zunairamughal.dev@gmail.com" class="hero-social-btn" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
         </div>
       </div>
       <div class="hero-img">
         <div class="hero-decoration"></div>
-        <img src="assets/profile.jpeg" alt="Zunaira Abdul Ghaffar" />
+        <img src="assets/profileS.jpeg" alt="Zunaira Abdul Ghaffar" />
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════
+       SERVICES MARQUEE BANNER
+  ═══════════════════════════════════════ -->
+  <div class="marquee-banner" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span class="marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter App Development</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-figma-plain colored"></i> Figma to Flutter UI</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase Integration</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-openai-plain colored"></i> AI-Powered Mobile Apps</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="fa-solid fa-circle-nodes"></i> Clean Architecture</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-supabase-plain colored"></i> Supabase &amp; REST APIs</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="fa-solid fa-gears"></i> BLoC State Management</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-google-plain colored"></i> Google ML Kit</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-apple-original colored"></i> &amp; <i class="devicon-android-plain colored"></i> iOS &amp; Android Apps</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-openai-plain colored"></i> OpenAI API Integration</span>
+        <span class="marquee-sep">◆</span>
+      </div>
+      <div class="marquee-content">
+        <span class="marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter App Development</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-figma-plain colored"></i> Figma to Flutter UI</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase Integration</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-openai-plain colored"></i> AI-Powered Mobile Apps</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="fa-solid fa-circle-nodes"></i> Clean Architecture</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-supabase-plain colored"></i> Supabase &amp; REST APIs</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="fa-solid fa-gears"></i> BLoC State Management</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-google-plain colored"></i> Google ML Kit</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-apple-original colored"></i> &amp; <i class="devicon-android-plain colored"></i> iOS &amp; Android Apps</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><i class="devicon-openai-plain colored"></i> OpenAI API Integration</span>
+        <span class="marquee-sep">◆</span>
+      </div>
+    </div>
+  </div>
 
   <hr class="divider"/>
 
@@ -83,22 +155,30 @@
         </div>
         <div class="about-highlights">
           <div class="highlight-card">
-            <div class="highlight-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div class="highlight-icon">
+              <i class="devicon-flutter-plain colored"></i>
+            </div>
             <h4>Cross-Platform Apps</h4>
             <p>One codebase, both platforms. Built with Flutter and Dart.</p>
           </div>
           <div class="highlight-card">
-            <div class="highlight-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="highlight-icon">
+              <i class="devicon-firebase-plain colored"></i>
+            </div>
             <h4>Firebase</h4>
             <p>Auth, Firestore, FCM, Storage — used in real production apps.</p>
           </div>
           <div class="highlight-card">
-            <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="highlight-icon">
+              <i class="devicon-openai-plain colored"></i>
+            </div>
             <h4>AI Integration</h4>
             <p>OpenAI API and Google ML Kit, where it actually adds value.</p>
           </div>
           <div class="highlight-card">
-            <div class="highlight-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="highlight-icon">
+              <i class="fa-solid fa-circle-nodes"></i>
+            </div>
             <h4>Clean Architecture</h4>
             <p>BLoC, SOLID principles, feature-first structure — code a team can work with.</p>
           </div>
@@ -109,45 +189,7 @@
 
   <hr class="divider"/>
 
-  <!-- ═══════════════════════════════════════
-       EXPERIENCE
-  ═══════════════════════════════════════ -->
-  <section id="experience">
-    <div class="section-inner">
-      <span class="section-tag">Experience</span>
-      <h2 class="section-title">By the Numbers</h2>
-      <p class="section-sub">A snapshot of what I've built and shipped over the past two years.</p>
-
-      <div class="exp-panel reveal">
-        <div class="exp-stat-item">
-          <div class="exp-stat-num">15<span>+</span></div>
-          <div class="exp-stat-label">Apps Shipped</div>
-          <div class="exp-stat-note">iOS &amp; Android</div>
-        </div>
-        <div class="exp-divider"></div>
-        <div class="exp-stat-item">
-          <div class="exp-stat-num">2<span>+</span></div>
-          <div class="exp-stat-label">Years Experience</div>
-          <div class="exp-stat-note">Full-time Flutter</div>
-        </div>
-        <div class="exp-divider"></div>
-        <div class="exp-stat-item">
-          <div class="exp-stat-num">5<span>+</span></div>
-          <div class="exp-stat-label">Tech Stacks</div>
-          <div class="exp-stat-note">Firebase, Supabase, AI &amp; more</div>
-        </div>
-        <div class="exp-divider"></div>
-        <div class="exp-stat-item">
-          <div class="exp-stat-num">1</div>
-          <div class="exp-stat-label">Launching Soon</div>
-          <div class="exp-stat-note">Personal app — 2026</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="divider"/>
+  
 
   <!-- ═══════════════════════════════════════
        SKILLS
@@ -162,7 +204,9 @@
         <div class="skill-card">
           <div class="skill-header-row">
             <div class="skill-card-header">
-              <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="skill-icon">
+                <i class="devicon-flutter-plain colored"></i>
+              </div>
               <h4>Mobile Development</h4>
             </div>
             <span class="skill-percentage">90%</span>
@@ -183,7 +227,9 @@
         <div class="skill-card">
           <div class="skill-header-row">
             <div class="skill-card-header">
-              <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
+              <div class="skill-icon">
+                <i class="fa-solid fa-gears"></i>
+              </div>
               <h4>State Management</h4>
             </div>
             <span class="skill-percentage">85%</span>
@@ -204,8 +250,10 @@
         <div class="skill-card">
           <div class="skill-header-row">
             <div class="skill-card-header">
-              <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
-              <h4>Backend & Database</h4>
+              <div class="skill-icon">
+                <i class="devicon-supabase-plain colored"></i>
+              </div>
+              <h4>Backend &amp; Database</h4>
             </div>
             <span class="skill-percentage">82%</span>
           </div>
@@ -225,8 +273,10 @@
         <div class="skill-card">
           <div class="skill-header-row">
             <div class="skill-card-header">
-              <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
-              <h4>AI & Emerging Tech</h4>
+              <div class="skill-icon">
+                <i class="devicon-openai-plain colored"></i>
+              </div>
+              <h4>AI &amp; Emerging Tech</h4>
             </div>
             <span class="skill-percentage">70%</span>
           </div>
@@ -244,13 +294,15 @@
         <div class="skill-card">
           <div class="skill-header-row">
             <div class="skill-card-header">
-              <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-              <h4>Dev Tools & Practices</h4>
+              <div class="skill-icon">
+                <i class="devicon-git-plain colored"></i>
+              </div>
+              <h4>Dev Tools &amp; Practices</h4>
             </div>
             <span class="skill-percentage">80%</span>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Git &amp; GitHub</span>
             <span class="skill-tag">Clean Architecture</span>
             <span class="skill-tag">SOLID Principles</span>
             <span class="skill-tag">Agile / Scrum</span>
@@ -263,7 +315,9 @@
         <div class="skill-card">
           <div class="skill-header-row">
             <div class="skill-card-header">
-              <div class="skill-icon"><i class="fa-solid fa-language"></i></div>
+              <div class="skill-icon">
+                <i class="devicon-dart-plain colored"></i>
+              </div>
               <h4>Languages</h4>
             </div>
             <span class="skill-percentage">92%</span>
@@ -272,8 +326,6 @@
             <span class="skill-tag">Dart</span>
             <span class="skill-tag">Java</span>
             <span class="skill-tag">C++</span>
-            <span class="skill-tag">English</span>
-            <span class="skill-tag">Urdu</span>
           </div>
           <div class="skill-bar-wrap">
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
@@ -292,12 +344,14 @@
   <section id="projects">
     <div class="section-inner">
       <span class="section-tag">Portfolio</span>
-      <h2 class="section-title">Selected Projects</h2>
+      <h2 class="section-title">Featured Projects</h2>
       <p class="section-sub">A mix of what I've built — real apps, real problems, real code.</p>
       <div class="projects-grid reveal">
 
         <div class="project-card">
           <div class="project-thumb thumb-blue">
+            <!-- Drop your project image in the assets folder and uncomment this tag when ready: -->
+            <!-- <img src="assets/medic.png" alt="Medic App Screenshot" /> -->
             <i class="fa-solid fa-hospital-user project-fa"></i>
           </div>
           <div class="project-body">
@@ -309,12 +363,13 @@
             </div>
             <h3>Medic — Doctor Appointment App</h3>
             <p>Doctor booking app with real-time availability, Firebase Auth, and live Firestore sync. Covers the full flow from doctor search to appointment confirmation.</p>
-            <div class="project-date">Aug 2023 – Oct 2023</div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-thumb thumb-purple">
+            <!-- Drop your project image in the assets folder and uncomment this tag when ready: -->
+            <!-- <img src="assets/taskio.png" alt="Taskio App Screenshot" /> -->
             <i class="fa-solid fa-list-check project-fa"></i>
           </div>
           <div class="project-body">
@@ -325,12 +380,13 @@
             </div>
             <h3>Taskio — Task Scheduling App</h3>
             <p>Offline-first task manager using Hive for local persistence and BLoC for state. Tasks save instantly and the app works without a connection.</p>
-            <div class="project-date">Apr 2024</div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-thumb thumb-green">
+            <!-- Drop your project image in the assets folder and uncomment this tag when ready: -->
+            <!-- <img src="assets/stepease.png" alt="StepEase App Screenshot" /> -->
             <i class="fa-solid fa-cart-shopping project-fa"></i>
           </div>
           <div class="project-body">
@@ -341,12 +397,13 @@
             </div>
             <h3>StepEase — E-Commerce App</h3>
             <p>Clean e-commerce app — product listing, cart, and local order persistence with GetX. The focus was on keeping the UI light and interactions fast.</p>
-            <div class="project-date">Nov 2023</div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-thumb thumb-sky">
+            <!-- Drop your project image in the assets folder and uncomment this tag when ready: -->
+            <!-- <img src="assets/clima.png" alt="Clima App Screenshot" /> -->
             <i class="fa-solid fa-cloud-sun project-fa"></i>
           </div>
           <div class="project-body">
@@ -357,12 +414,13 @@
             </div>
             <h3>Clima — Weather Forecast App</h3>
             <p>Pulled in OpenWeatherMap's API, handled errors properly, and kept the async flow clean. A simple app, done right.</p>
-            <div class="project-date">May 2024</div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-thumb thumb-violet">
+            <!-- Drop your project image in the assets folder and uncomment this tag when ready: -->
+            <!-- <img src="assets/meloqiq.png" alt="MeloqiQ App Screenshot" /> -->
             <i class="fa-solid fa-music project-fa"></i>
           </div>
           <div class="project-body">
@@ -373,7 +431,6 @@
             </div>
             <h3>MeloqiQ — Music Player App</h3>
             <p>Music player with full playback controls, seek, queue, and playlist support. State stays consistent throughout the app lifecycle.</p>
-            <div class="project-date">May 2024</div>
           </div>
         </div>
 
@@ -394,25 +451,33 @@
       <div class="services-grid reveal">
 
         <div class="service-card">
-<div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <div class="service-icon">
+            <i class="devicon-flutter-plain colored"></i>
+          </div>
           <h3>Flutter App Development</h3>
           <p>Building cross-platform apps for iOS and Android with Flutter. From initial architecture to final deployment — I handle the full mobile stack.</p>
         </div>
 
         <div class="service-card">
-<div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <div class="service-icon">
+            <i class="devicon-figma-plain colored"></i>
+          </div>
           <h3>Flutter UI from Figma</h3>
           <p>Got a Figma design? I'll turn it into a responsive Flutter UI — clean structure, good performance, and as close to the design as Flutter allows.</p>
         </div>
 
         <div class="service-card">
-<div class="service-icon"><i class="fa-solid fa-fire"></i></div>
+          <div class="service-icon">
+            <i class="devicon-firebase-plain colored"></i>
+          </div>
           <h3>Firebase Integration</h3>
           <p>Setting up Firebase Auth, Firestore, Cloud Messaging, and Storage for apps that need a solid, real-time backend without managing a custom server.</p>
         </div>
 
         <div class="service-card">
-<div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="service-icon">
+            <i class="devicon-openai-plain colored"></i>
+          </div>
           <h3>AI-Powered Mobile Apps</h3>
           <p>Integrating OpenAI API or Google ML Kit into Flutter apps — chat assistants, image recognition, or smarter features where AI genuinely improves the experience.</p>
         </div>
@@ -423,37 +488,7 @@
 
   <hr class="divider"/>
 
-  <!-- ═══════════════════════════════════════
-       CURRENTLY LEARNING
-  ═══════════════════════════════════════ -->
-  <section id="learning">
-    <div class="section-inner">
-      <span class="section-tag">Growth</span>
-      <h2 class="section-title">What I'm Working On</h2>
-      <p class="section-sub">Things I'm actively spending time on right now.</p>
-      <div class="learning-grid reveal">
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <p>Building AI-powered Flutter apps with OpenAI API and Google ML Kit</p>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <p>Deepening my understanding of clean architecture — better separation of concerns, more maintainable codebases</p>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <p>Learning Riverpod 2.0 as a cleaner approach to state management</p>
-        </div>
-        <div class="learning-item">
-          <div class="learning-dot"></div>
-          <p>Working toward publishing my first app on the Google Play Store in 2026</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider"/>
-
+ 
   <!-- ═══════════════════════════════════════
        CONTACT
   ═══════════════════════════════════════ -->
@@ -474,13 +509,13 @@
                 <a href="mailto:zunairamughal.dev@gmail.com">zunairamughal.dev@gmail.com</a>
               </div>
             </div>
-            <div class="contact-item">
+            <!-- <div class="contact-item">
               <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
               <div class="contact-item-text">
                 <span>Phone</span>
                 <a href="tel:+923010709866">+92 301 070 9866</a>
               </div>
-            </div>
+            </div> -->
             <div class="contact-item">
               <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div class="contact-item-text">
@@ -536,6 +571,17 @@
     <div class="footer-inner">
       <div class="footer-name">Zunaira Abdul Ghaffar</div>
       <p>Flutter Developer · Open to Remote Work</p>
+      <div class="footer-socials">
+        <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:zunairamughal.dev@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
       <p class="footer-copy">© 2026 Zunaira Abdul Ghaffar · <a href="mailto:zunairamughal.dev@gmail.com">zunairamughal.dev@gmail.com</a></p>
     </div>
   </footer>
