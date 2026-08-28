@@ -77,6 +77,12 @@
           <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer" class="hero-social-btn" aria-label="LinkedIn" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
+          <a href="https://stackoverflow.com/users/33055380/zunaira-mughal" target="_blank" rel="noopener noreferrer" class="hero-social-btn" aria-label="Stack Overflow" title="Stack Overflow">
+            <i class="fa-brands fa-stack-overflow"></i>
+          </a>
+          <a href="https://www.instagram.com/_zunairamughal.dev?igsh=emNxeGp4djBjOTht" target="_blank" rel="noopener noreferrer" class="hero-social-btn" aria-label="Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
           <div class="hero-social-divider"></div>
           <a href="mailto:zunairamughal.dev@gmail.com" class="hero-social-btn" aria-label="Email" title="Direct Email">
             <i class="fa-solid fa-envelope"></i>
@@ -431,77 +437,55 @@
   <hr class="divider"/>
 
   <!-- ═══════════════════════════════════════
-       CONTACT
+       CONTACT (Modern Minimalist Dock)
   ═══════════════════════════════════════ -->
   <section id="contact">
-    <div class="section-inner">
-      <div class="section-header center">
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="section-sub">Available for full-time engineering roles, remote contracts, and freelance projects. Let's discuss how I can contribute to your team.</p>
-      </div>
-
-      <div class="contact-grid reveal">
-        <div class="contact-info">
-          <h3>Get in touch.</h3>
-          <p>Have an open Flutter developer role, a product in the works, or questions about my projects? Send me a message and I will reply promptly.</p>
-          
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="contact-item-text">
-                <span>Direct Email</span>
-                <a href="mailto:zunairamughal.dev@gmail.com">zunairamughal.dev@gmail.com</a>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="contact-item-text">
-                <span>Location</span>
-                <p>Gujranwala, Pakistan · Remote Worldwide</p>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
-              <div class="contact-item-text">
-                <span>LinkedIn</span>
-                <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer">zunaira-mughal-80637b276</a>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-              <div class="contact-item-text">
-                <span>GitHub</span>
-                <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer">ZunairaMughal24</a>
-              </div>
-            </div>
-          </div>
+    <div class="section-inner contact-minimal-wrap">
+      
+      <div class="contact-minimal-card reveal">
+        
+        <!-- Live Status Badge -->
+        <div class="status-badge-minimal">
+          <span class="status-pulse-dot"></span>
+          <span>Available for hire &amp; projects</span>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required />
-            </div>
+        <!-- Big Bold Title -->
+        <h2 class="contact-minimal-title">Let's create something <span class="gradient-text">extraordinary.</span></h2>
+        <p class="contact-minimal-sub">Have a mobile app in mind, an engineering role to fill, or want to connect? My inbox is always open.</p>
+
+        <!-- Modern Action Icon Buttons -->
+        <div class="contact-action-bar">
+          <a href="mailto:zunairamughal.dev@gmail.com" class="action-btn email-btn">
+            <i class="fa-solid fa-envelope"></i>
+            <span>zunairamughal.dev@gmail.com</span>
+          </a>
+          <button type="button" class="action-btn copy-btn" id="btnCopyEmailMini" title="Copy Email">
+            <i class="fa-regular fa-copy"></i>
+            <span id="copyTextMini">Copy</span>
+          </button>
+          <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer" class="action-icon-pill" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer" class="action-icon-pill" title="GitHub" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <!-- Sleek Single-Line Message Prompt Field -->
+        <form class="quick-prompt-form" id="quickMessageForm">
+          <div class="quick-prompt-bar">
+            <i class="fa-regular fa-comment-dots prompt-icon"></i>
+            <input type="text" id="quickMsgInput" placeholder="Drop a quick message or say hello..." required autocomplete="off" />
+            <button type="submit" class="quick-send-btn btn-primary" aria-label="Send direct message">
+              <span>Send</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, or team requirements..." required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Message &rarr;</button>
         </form>
+
       </div>
+
     </div>
   </section>
 
@@ -514,13 +498,19 @@
       <p>Flutter Developer · Mobile Application Specialist</p>
       
       <div class="footer-socials">
-        <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
+        <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="mailto:zunairamughal.dev@gmail.com" aria-label="Email">
+        <a href="https://stackoverflow.com/users/33055380/zunaira-mughal" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow" title="Stack Overflow">
+          <i class="fa-brands fa-stack-overflow"></i>
+        </a>
+        <a href="https://www.instagram.com/_zunairamughal.dev?igsh=emNxeGp4djBjOTht" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="mailto:zunairamughal.dev@gmail.com" aria-label="Email" title="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>

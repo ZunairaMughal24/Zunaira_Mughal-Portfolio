@@ -96,37 +96,45 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── 6. CONTACT FORM SUBMISSION ── */
-  const contactForm = document.getElementById('contactForm');
+  /* ── 6. MINIMAL CONTACT ACTIONS ── */
+  const btnCopyEmailMini = document.getElementById('btnCopyEmailMini');
+  const copyTextMini     = document.getElementById('copyTextMini');
+  const quickMessageForm = document.getElementById('quickMessageForm');
+  const quickMsgInput    = document.getElementById('quickMsgInput');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+  if (btnCopyEmailMini) {
+    btnCopyEmailMini.addEventListener('click', () => {
+      const email = 'zunairamughal.dev@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        btnCopyEmailMini.classList.add('copied');
+        btnCopyEmailMini.innerHTML = '<i class="fa-solid fa-check"></i> <span>Copied!</span>';
+        showToast('Email address copied to clipboard!');
+        setTimeout(() => {
+          btnCopyEmailMini.classList.remove('copied');
+          btnCopyEmailMini.innerHTML = '<i class="fa-regular fa-copy"></i> <span id="copyTextMini">Copy</span>';
+        }, 2200);
+      }).catch(() => {
+        showToast('zunairamughal.dev@gmail.com');
+      });
+    });
+  }
+
+  if (quickMessageForm && quickMsgInput) {
+    quickMessageForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      const name    = document.getElementById('name').value.trim();
-      const email   = document.getElementById('email').value.trim();
-      const subject = document.getElementById('subject').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      if (!name || !email || !message) {
-        showToast('Please fill in your name, email, and message.');
+      const text = quickMsgInput.value.trim();
+      if (!text) {
+        showToast('Please type a short message or your email.');
         return;
       }
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        showToast('Please enter a valid email address.');
-        return;
-      }
-
-      const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
       const mailtoUrl = `mailto:zunairamughal.dev@gmail.com`
-        + `?subject=${encodeURIComponent(subject || 'Flutter Developer Inquiry')}`
-        + `&body=${encodeURIComponent(body)}`;
+        + `?subject=${encodeURIComponent('Quick Message from Portfolio')}`
+        + `&body=${encodeURIComponent(text)}`;
 
       window.location.href = mailtoUrl;
-      showToast(`Opening your email client, ${name}. Talk soon!`);
-      contactForm.reset();
+      showToast('Opening your email client...');
+      quickMessageForm.reset();
     });
   }
 
