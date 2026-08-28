@@ -654,7 +654,16 @@ section {
 ═══════════════════════════════════════════════════════ */
 
 #skills {
-  background: var(--bg-subtle);
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9, 10, 13, 0.90) 0%,
+      rgba(9, 10, 13, 0.76) 50%,
+      rgba(9, 10, 13, 0.92) 100%
+    ),
+    url('../assets/about-bg.jpg') center center / cover no-repeat fixed;
+  overflow: hidden;
 }
 
 #skills .section-tag {
