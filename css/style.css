@@ -959,7 +959,28 @@ section {
 ═══════════════════════════════════════════════════════ */
 
 #contact {
-  background: var(--bg);
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9, 10, 13, 0.90) 0%,
+      rgba(9, 10, 13, 0.80) 50%,
+      rgba(9, 10, 13, 0.94) 100%
+    ),
+    url('../assets/contact-bg.jpg') center center / cover no-repeat;
+  overflow: hidden;
+}
+
+#contact .section-tag {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #94a3b8;
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
 }
 
 .contact-grid {
