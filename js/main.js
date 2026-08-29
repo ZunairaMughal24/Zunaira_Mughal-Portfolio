@@ -96,45 +96,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── 6. MINIMAL CONTACT ACTIONS ── */
-  const btnCopyEmailMini = document.getElementById('btnCopyEmailMini');
-  const copyTextMini     = document.getElementById('copyTextMini');
-  const quickMessageForm = document.getElementById('quickMessageForm');
-  const quickMsgInput    = document.getElementById('quickMsgInput');
+  /* ── 6. FLOATING CANVAS INTERACTION ── */
+  const contactCanvas = document.getElementById('contactFloatingCanvas');
+  if (contactCanvas) {
+    const pills = contactCanvas.querySelectorAll('.floating-pill-badge');
+    
+    contactCanvas.addEventListener('mousemove', (e) => {
+      const rect = contactCanvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-  if (btnCopyEmailMini) {
-    btnCopyEmailMini.addEventListener('click', () => {
-      const email = 'zunairamughal.dev@gmail.com';
-      navigator.clipboard.writeText(email).then(() => {
-        btnCopyEmailMini.classList.add('copied');
-        btnCopyEmailMini.innerHTML = '<i class="fa-solid fa-check"></i> <span>Copied!</span>';
-        showToast('Email address copied to clipboard!');
-        setTimeout(() => {
-          btnCopyEmailMini.classList.remove('copied');
-          btnCopyEmailMini.innerHTML = '<i class="fa-regular fa-copy"></i> <span id="copyTextMini">Copy</span>';
-        }, 2200);
-      }).catch(() => {
-        showToast('zunairamughal.dev@gmail.com');
+      pills.forEach((pill, idx) => {
+        const factor = (idx + 1) * 12;
+        pill.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
       });
     });
-  }
 
-  if (quickMessageForm && quickMsgInput) {
-    quickMessageForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const text = quickMsgInput.value.trim();
-      if (!text) {
-        showToast('Please type a short message or your email.');
-        return;
-      }
-
-      const mailtoUrl = `mailto:zunairamughal.dev@gmail.com`
-        + `?subject=${encodeURIComponent('Quick Message from Portfolio')}`
-        + `&body=${encodeURIComponent(text)}`;
-
-      window.location.href = mailtoUrl;
-      showToast('Opening your email client...');
-      quickMessageForm.reset();
+    contactCanvas.addEventListener('mouseleave', () => {
+      pills.forEach(pill => {
+        pill.style.transform = '';
+      });
     });
   }
 

@@ -964,222 +964,408 @@ section {
 }
 
 /* ═══════════════════════════════════════════════════════
-   CONTACT SECTION (Modern Minimalist Dock)
+   CONTACT (Stunning Apps & Collaboration Section)
 ═══════════════════════════════════════════════════════ */
 
 #contact {
   position: relative;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(9, 10, 13, 0.92) 0%,
-      rgba(9, 10, 13, 0.82) 50%,
-      rgba(9, 10, 13, 0.95) 100%
-    ),
-    url('../assets/contact-bg.jpg') center center / cover no-repeat fixed;
   overflow: hidden;
-  padding: 6.5rem 4.5%;
+  padding: 4.5rem 4% 5.5rem;
 }
 
-.contact-minimal-wrap {
-  max-width: 860px;
+.contact-section-container {
+  max-width: 1120px;
   margin: 0 auto;
 }
 
-.contact-minimal-card {
-  background: var(--card);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 3.8rem 3rem;
+/* ── Section Header (Eyebrow & Main Title) ── */
+.contact-header-area {
   text-align: center;
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  margin-bottom: 2.2rem;
 }
 
-.status-badge-minimal {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  color: #4ade80;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.35rem 1rem;
-  border-radius: var(--radius-full);
-  letter-spacing: 0.2px;
-}
-
-.status-pulse-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 10px #22c55e;
-  animation: pulse-green 2s infinite;
-}
-
-@keyframes pulse-green {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
-}
-
-.contact-minimal-title {
+.contact-tag-label {
+  display: inline-block;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.5rem, 5.5vw, 4.4rem);
   font-weight: 800;
-  color: var(--white);
-  line-height: 1.16;
-  letter-spacing: -0.035em;
-  max-width: 720px;
+  color: #ffffff;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  max-width: 820px;
+  margin: 0 auto;
 }
 
-.contact-minimal-sub {
-  color: #cbd5e1;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  max-width: 580px;
+.contact-headline-italic {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 40%, #ff6fa3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 0.06em;
 }
 
-/* Action Buttons Dock */
-.contact-action-bar {
+/* ── Collaboration Card Container (Widescreen Sleek Proportion) ── */
+.contact-collab-card {
+  background: #08090d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 2.2rem 3.4rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-collab-card:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(59, 130, 246, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* ── Left Column: Interactive Floating Canvas ── */
+.contact-floating-canvas {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: radial-gradient(ellipse at 45% 50%, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+  border-radius: 20px;
+  user-select: none;
+}
+
+.canvas-glow {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.08);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* Blinking Small Sparkle Stars */
+.star-sparkle {
+  position: absolute;
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
+  z-index: 1;
+  animation: star-bling 2.6s ease-in-out infinite;
 }
 
-.action-btn {
+.star-sparkle svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Star 1: Top-Left Open Pocket */
+.star-1 {
+  top: 8%;
+  left: 10%;
+  width: 9px;
+  height: 9px;
+  color: #ffffff;
+  animation-delay: 0s;
+}
+
+/* Star 2: Top-Right Open Pocket */
+.star-2 {
+  top: 10%;
+  right: 12%;
+  width: 8px;
+  height: 8px;
+  color: #93c5fd;
+  animation-delay: 0.85s;
+}
+
+/* Star 3: Mid-Right Open Pocket */
+.star-3 {
+  top: 38%;
+  right: 10%;
+  width: 6.5px;
+  height: 6.5px;
+  color: #ffffff;
+  animation-delay: 1.6s;
+}
+
+/* Star 4: Bottom-Right Open Pocket */
+.star-4 {
+  bottom: 10%;
+  right: 14%;
+  width: 9.5px;
+  height: 9.5px;
+  color: #ff6fa3;
+  animation-delay: 0.4s;
+}
+
+/* Star 5: Top-Center Open Pocket */
+.star-5 {
+  top: 6%;
+  left: 56%;
+  width: 7.5px;
+  height: 7.5px;
+  color: #ffffff;
+  animation-delay: 1.25s;
+}
+
+/* Star 6: Bottom-Center Open Pocket */
+.star-6 {
+  bottom: 6%;
+  left: 58%;
+  width: 6px;
+  height: 6px;
+  color: #f1f5f9;
+  animation-delay: 2.1s;
+}
+
+/* Star 7: Mid-Left Edge Open Pocket */
+.star-7 {
+  top: 64%;
+  left: 4%;
+  width: 7.5px;
+  height: 7.5px;
+  color: #93c5fd;
+  animation-delay: 1.5s;
+}
+
+/* Star 8: Center Open Gap Pocket */
+.star-8 {
+  top: 34%;
+  left: 30%;
+  width: 8px;
+  height: 8px;
+  color: #ffffff;
+  animation-delay: 0.9s;
+}
+
+@keyframes star-bling {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.65) rotate(0deg);
+    filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15) rotate(90deg);
+    filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+  }
+}
+
+/* Floating Pills */
+.floating-pill-badge {
+  position: absolute;
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1.4rem;
-  border-radius: var(--radius-full);
-  font-size: 0.92rem;
+  justify-content: center;
+  padding: 0.48rem 1.15rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.86rem;
   font-weight: 600;
-  transition: all var(--transition-fast);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   cursor: pointer;
-  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-.email-btn {
-  background: var(--pink-soft);
-  border: 1px solid var(--pink-border);
-  color: var(--white);
+.floating-pill-badge:hover {
+  transform: scale(1.08) translateY(-3px) !important;
+  border-color: rgba(96, 165, 250, 0.55);
+  background: rgba(26, 34, 54, 0.92);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.35);
+  z-index: 10;
 }
 
-.email-btn:hover {
-  background: var(--pink);
-  border-color: var(--pink);
-  box-shadow: 0 6px 20px rgba(255, 45, 120, 0.35);
-  transform: translateY(-2px);
+/* UI/UX Design Pill (Accent Blue Glow) */
+.pill-uiux {
+  top: 14%;
+  left: 36%;
+  background: rgba(22, 28, 45, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.45);
+  color: #93c5fd;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+  animation: float-drift-1 6s ease-in-out infinite;
 }
 
-.copy-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.pill-uiux:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 0 28px rgba(59, 130, 246, 0.5);
+}
+
+/* Flutter Pill */
+.pill-flutter {
+  top: 38%;
+  left: 8%;
+  background: rgba(18, 20, 26, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: float-drift-2 7s ease-in-out infinite;
 }
 
-.copy-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.25);
+/* Cross-Platform Pill */
+.pill-crossplatform {
+  bottom: 18%;
+  left: 42%;
+  background: rgba(18, 20, 26, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: float-drift-3 6.5s ease-in-out infinite;
+}
+
+/* Animations Pill */
+.pill-animations {
+  bottom: 8%;
+  left: 14%;
+  background: rgba(18, 20, 26, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: float-drift-4 8s ease-in-out infinite;
+}
+
+/* Pill Floating Drift Keyframes */
+@keyframes float-drift-1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -10px); }
+}
+
+@keyframes float-drift-2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, 8px); }
+}
+
+@keyframes float-drift-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(8px, -8px); }
+}
+
+@keyframes float-drift-4 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-6px, -6px); }
+}
+
+/* ── Right Column: Info & Action Buttons ── */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-result-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.95rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.65rem;
+}
+
+.contact-result-subtitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.02rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.85rem;
+}
+
+/* Action Buttons Cluster */
+.contact-actions-cluster {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Send Email Solid White Pill Button */
+.btn-email-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.78rem 1.65rem;
+  background: #ffffff;
+  color: #090a0f;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+
+.btn-email-primary:hover {
+  background: #f1f5f9;
+  color: #000000;
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.28);
 }
 
-.copy-btn.copied {
-  background: #22c55e;
-  border-color: #22c55e;
-  color: #fff;
-}
-
-.action-icon-pill {
+/* Square Icon Social Buttons */
+.contact-social-square {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #cbd5e1;
-  font-size: 1.15rem;
-  transition: all var(--transition-fast);
+  font-size: 1.22rem;
   text-decoration: none;
-}
-
-.action-icon-pill:hover {
-  background: var(--pink-soft);
-  border-color: var(--pink-border);
-  color: var(--white);
-  transform: translateY(-2px) scale(1.08);
-}
-
-/* Single-Line Quick Message Prompt */
-.quick-prompt-form {
-  width: 100%;
-  max-width: 620px;
-  margin-top: 1rem;
-}
-
-.quick-prompt-bar {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-full);
-  padding: 0.4rem 0.5rem 0.4rem 1.25rem;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-.quick-prompt-bar:focus-within {
-  border-color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(255, 45, 120, 0.2), 0 8px 30px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.07);
+.contact-social-square:hover {
+  transform: translateY(-2px);
 }
 
-.prompt-icon {
-  font-size: 1.1rem;
-  color: var(--pink-light);
-  margin-right: 0.75rem;
-  flex-shrink: 0;
+.contact-social-square.whatsapp-btn:hover,
+.contact-social-square:has(.fa-whatsapp):hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
 }
 
-.quick-prompt-bar input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--white);
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.95rem;
+.contact-social-square.linkedin-btn:hover,
+.contact-social-square:has(.fa-linkedin-in):hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 119, 181, 0.4);
 }
 
-.quick-prompt-bar input::placeholder {
-  color: #94a3b8;
-}
-
-.quick-send-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.4rem;
-  border-radius: var(--radius-full);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  flex-shrink: 0;
-  border: none;
+.contact-social-square.github-btn:hover,
+.contact-social-square:has(.fa-github):hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -1345,9 +1531,20 @@ footer {
     justify-content: center;
   }
 
-  .contact-modern-hub {
+  .contact-collab-card {
     grid-template-columns: 1fr;
-    gap: 2.2rem;
+    gap: 2.8rem;
+    padding: 3rem 2.2rem;
+    text-align: center;
+  }
+
+  .contact-info-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-actions-cluster {
+    justify-content: center;
   }
 }
 
@@ -1387,6 +1584,18 @@ footer {
   .form-row {
     grid-template-columns: 1fr;
   }
+
+  .contact-floating-canvas {
+    height: 260px;
+  }
+
+  .pill-uiux {
+    left: 28%;
+  }
+
+  .pill-crossplatform {
+    left: 32%;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1409,13 +1618,16 @@ footer {
     height: 250px;
   }
 
-  .contact-direct-card,
-  .contact-form-card {
-    padding: 1.6rem 1.2rem;
+  .contact-collab-card {
+    padding: 2.5rem 1.4rem;
   }
 
-  .email-copy-row {
-    flex-direction: column;
-    align-items: flex-start;
+  .contact-floating-canvas {
+    height: 230px;
+  }
+
+  .floating-pill-badge {
+    font-size: 0.78rem;
+    padding: 0.42rem 0.95rem;
   }
 }
