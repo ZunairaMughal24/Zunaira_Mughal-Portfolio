@@ -267,24 +267,14 @@ section {
 }
 
 .section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 1.2px;
+  display: inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--pink-light);
-  background: var(--pink-soft);
-  border: 1px solid var(--pink-border);
-  padding: 0.3rem 0.9rem;
-  border-radius: var(--radius-full);
+  color: #555d6e;
   margin-bottom: 1rem;
-}
-
-.section-tag i {
-  font-size: 0.75rem;
-  color: var(--pink);
 }
 
 .section-title {
@@ -607,18 +597,6 @@ section {
   padding-left: 1rem;
 }
 
-.about-text-side .section-tag {
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: #94a3b8;
-  font-weight: 700;
-  font-size: 0.84rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 0.9rem;
-}
-
 .about-text-side .section-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.1rem, 3.2vw, 2.75rem);
@@ -664,18 +642,6 @@ section {
     ),
     url('../assets/about-bg.jpg') center center / cover no-repeat fixed;
   overflow: hidden;
-}
-
-#skills .section-tag {
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: #94a3b8;
-  font-weight: 700;
-  font-size: 0.84rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
 }
 
 .skills-grid {
@@ -799,18 +765,6 @@ section {
 
 #projects {
   background: var(--bg);
-}
-
-#projects .section-tag {
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: #94a3b8;
-  font-weight: 700;
-  font-size: 0.84rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
 }
 
 .projects-grid {
@@ -990,7 +944,7 @@ section {
   font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.28em;
-  color: #94a3b8;
+  color: #555d6e;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
