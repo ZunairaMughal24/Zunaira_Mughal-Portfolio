@@ -96,6 +96,172 @@
   <hr class="divider"/>
 
   <!-- ═══════════════════════════════════════
+       MOBILE SHOWCASE (Interactive 3D Phone with Live App & Floating Parallax Badges)
+  ═══════════════════════════════════════ -->
+  <section id="showcase">
+    <!-- Ambient Rose Halo Behind Phone -->
+    <div class="showcase-ambient-halo"></div>
+
+    <div class="section-inner showcase-section-inner">
+      <!-- Section Header -->
+      <div class="showcase-header reveal">
+        <span class="section-tag">ENGINEERING IN MOTION</span>
+        <h2 class="showcase-title">
+          Where clean architecture meets <span class="showcase-italic">pixel-level fluidity.</span>
+        </h2>
+      </div>
+
+      <!-- 3D Perspective Stage Container -->
+      <div class="showcase-stage-wrap reveal" id="showcaseStage">
+        
+        <!-- Floating Parallax Badge 1: Top Left -->
+        <div class="floating-badge badge-top-left" data-speed="22">
+          <div class="badge-icon-box icon-pink">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="badge-text-content">
+            <span class="badge-primary-txt">Clean Architecture</span>
+            <span class="badge-secondary-txt">Decoupled BLoC Layers</span>
+          </div>
+        </div>
+
+        <!-- Floating Parallax Badge 2: Top Right -->
+        <div class="floating-badge badge-top-right" data-speed="-20">
+          <div class="badge-icon-box icon-cyan">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <div class="badge-text-content">
+            <span class="badge-primary-txt">60.0 FPS Locked</span>
+            <span class="badge-secondary-txt">Zero UI Frame Drops</span>
+          </div>
+        </div>
+
+        <!-- Floating Parallax Badge 3: Bottom Left -->
+        <div class="floating-badge badge-btm-left" data-speed="-16">
+          <div class="badge-icon-box icon-amber">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div class="badge-text-content">
+            <span class="badge-primary-txt">Offline-First Engine</span>
+            <span class="badge-secondary-txt">Hive &amp; REST Auto-Sync</span>
+          </div>
+        </div>
+
+        <!-- Floating Parallax Badge 4: Bottom Right -->
+        <div class="floating-badge badge-btm-right" data-speed="18">
+          <div class="badge-icon-box icon-emerald">
+            <i class="fa-brands fa-apple"></i>
+          </div>
+          <div class="badge-text-content">
+            <span class="badge-primary-txt">iOS &amp; Android</span>
+            <span class="badge-secondary-txt">Single Dart Codebase</span>
+          </div>
+        </div>
+
+        <!-- Central Floating 3D iPhone Frame -->
+        <div class="phone-3d-chassis" id="phoneChassis">
+          <!-- Glass Specular Reflection Over Screen -->
+          <div class="phone-glare-sheen" id="phoneGlare"></div>
+
+          <!-- Outer Titanium Bezel Edge -->
+          <div class="phone-outer-frame">
+            <!-- Dynamic Island -->
+            <div class="phone-dynamic-island">
+              <span class="island-camera"></span>
+              <div class="island-wave-bars">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Inner Phone Screen -->
+            <div class="phone-screen-content">
+              <!-- Mobile Status Bar -->
+              <div class="screen-status-bar">
+                <span class="status-clock" id="screenClock">09:41</span>
+                <div class="status-indicators">
+                  <i class="fa-solid fa-signal"></i>
+                  <i class="fa-solid fa-wifi"></i>
+                  <i class="fa-solid fa-battery-full"></i>
+                </div>
+              </div>
+
+              <!-- App Header Bar -->
+              <div class="app-header-bar">
+                <div class="app-profile-chip">
+                  <img src="assets/profileS-removebg-preview.png" alt="Zunaira" class="app-avatar-img" />
+                  <div class="app-header-titles">
+                    <span class="app-greeting">Welcome back,</span>
+                    <span class="app-user-name">Dr. Zunaira M.</span>
+                  </div>
+                </div>
+                <div class="app-bell-btn">
+                  <span class="bell-dot"></span>
+                  <i class="fa-regular fa-bell"></i>
+                </div>
+              </div>
+
+              <!-- Live Stat Card in App -->
+              <div class="app-hero-metric-card">
+                <div class="metric-card-top">
+                  <span class="metric-label">Active Consultations</span>
+                  <span class="metric-growth-pill">+18.4%</span>
+                </div>
+                <div class="metric-main-val">1,420 <span class="metric-sub">patients</span></div>
+                <!-- Animated SVG Sparkline -->
+                <div class="metric-sparkline-wrap">
+                  <svg class="sparkline-svg" viewBox="0 0 200 45" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ff2d78" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="#ff2d78" stop-opacity="0.0"/>
+                      </linearGradient>
+                    </defs>
+                    <path class="sparkline-area" d="M0,35 Q30,10 60,25 T120,8 T160,20 T200,5 L200,45 L0,45 Z" fill="url(#sparkGrad)"/>
+                    <path class="sparkline-line" d="M0,35 Q30,10 60,25 T120,8 T160,20 T200,5" fill="none" stroke="#ff2d78" stroke-width="2.5"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Quick Action Cards in App -->
+              <div class="app-quick-grid">
+                <div class="app-mini-card active" id="appCard1">
+                  <div class="mini-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                  <span class="mini-card-title">Vitals</span>
+                  <span class="mini-card-sub">Normal</span>
+                </div>
+                <div class="app-mini-card" id="appCard2">
+                  <div class="mini-card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                  <span class="mini-card-title">Schedule</span>
+                  <span class="mini-card-sub">3 Today</span>
+                </div>
+                <div class="app-mini-card" id="appCard3">
+                  <div class="mini-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                  <span class="mini-card-title">AI Triage</span>
+                  <span class="mini-card-sub">Ready</span>
+                </div>
+              </div>
+
+              <!-- Interactive Floating Heart / Action Button -->
+              <div class="app-interactive-bar">
+                <button class="app-pulse-action-btn" id="phonePulseBtn" type="button">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Tap to Pulse App</span>
+                </button>
+              </div>
+
+              <!-- Phone Home Indicator Bar -->
+              <div class="phone-home-indicator"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ═══════════════════════════════════════
        ABOUT
   ═══════════════════════════════════════ -->
   <section id="about">

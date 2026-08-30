@@ -147,4 +147,108 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  /* ── 8. INTERACTIVE 3D PHONE SHOWCASE & PARALLAX ── */
+  const showcaseStage = document.getElementById('showcaseStage');
+  const phoneChassis = document.getElementById('phoneChassis');
+  const phoneGlare = document.getElementById('phoneGlare');
+  const floatingBadges = document.querySelectorAll('.floating-badge');
+  const phonePulseBtn = document.getElementById('phonePulseBtn');
+  const appCards = document.querySelectorAll('.app-mini-card');
+  const screenClock = document.getElementById('screenClock');
+
+  // Real-time Clock on Phone
+  if (screenClock) {
+    const updatePhoneClock = () => {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const mins = String(now.getMinutes()).padStart(2, '0');
+      screenClock.textContent = `${hours}:${mins}`;
+    };
+    updatePhoneClock();
+    setInterval(updatePhoneClock, 30000);
+  }
+
+  // 3D Perspective Mouse Parallax on Stage
+  if (showcaseStage && phoneChassis) {
+    showcaseStage.addEventListener('mousemove', (e) => {
+      const rect = showcaseStage.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      const rotateX = -y * 22;
+      const rotateY = x * 22;
+
+      phoneChassis.style.animation = 'none'; // pause idle while hovering
+      phoneChassis.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+
+      if (phoneGlare) {
+        phoneGlare.style.background = `linear-gradient(${115 + x * 40}deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 40%, rgba(255,111,163,0.12) 65%, transparent 100%)`;
+      }
+
+      // Parallax displace floating badges
+      floatingBadges.forEach(badge => {
+        const speed = parseFloat(badge.getAttribute('data-speed')) || 15;
+        const tx = x * speed;
+        const ty = y * speed;
+        badge.style.transform = `translate(${tx}px, ${ty}px)`;
+      });
+    });
+
+    showcaseStage.addEventListener('mouseleave', () => {
+      phoneChassis.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1)';
+      phoneChassis.style.animation = 'phoneIdleFloat 6s ease-in-out infinite alternate';
+
+      floatingBadges.forEach(badge => {
+        badge.style.transform = '';
+      });
+    });
+  }
+
+  // Interactive Quick Action Cards
+  if (appCards.length > 0) {
+    appCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        appCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  }
+
+  // Interactive Pulse Button & Floating Hearts
+  if (phonePulseBtn) {
+    phonePulseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const screen = phonePulseBtn.closest('.phone-screen-content');
+      if (screen) {
+        const icons = ['fa-heart', 'fa-wand-magic-sparkles', 'fa-bolt', 'fa-fire'];
+        const colors = ['#ff2d78', '#ff6fa3', '#38bdf8', '#fbbf24'];
+
+        for (let i = 0; i < 4; i++) {
+          setTimeout(() => {
+            const heart = document.createElement('i');
+            const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            heart.className = `fa-solid ${randomIcon} app-floating-heart`;
+            heart.style.color = randomColor;
+
+            const hx = (Math.random() * 80 - 40) + 'px';
+            const hrot = (Math.random() * 40 - 20) + 'deg';
+            heart.style.setProperty('--hx', hx);
+            heart.style.setProperty('--hrot', hrot);
+
+            heart.style.left = `calc(50% + ${(Math.random() * 40 - 20)}px)`;
+            heart.style.bottom = '85px';
+
+            screen.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 1200);
+          }, i * 100);
+        }
+      }
+    });
+  }
+
 });
