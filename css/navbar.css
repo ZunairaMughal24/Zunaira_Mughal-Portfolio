@@ -1,0 +1,144 @@
+/* ═══════════════════════════════════════════════════════
+   NAVIGATION COMPONENT
+   File: css/navbar.css
+═══════════════════════════════════════════════════════ */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 4.5%;
+  background: rgba(9, 10, 13, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+#navbar.scrolled {
+  padding: 0.8rem 4.5%;
+  background: rgba(9, 10, 13, 0.96);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.55);
+}
+
+.nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.nav-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-xs);
+  background: var(--grad-pink);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.76rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(190, 18, 60, 0.35);
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-logo-text span {
+  color: var(--pink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-links a:not(.nav-cta):hover {
+  color: var(--white);
+}
+
+.nav-links a:not(.nav-cta)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--pink);
+  border-radius: var(--radius-full);
+  transition: width var(--transition);
+}
+
+.nav-links a:not(.nav-cta):hover::after,
+.nav-links a:not(.nav-cta).active::after {
+  width: 100%;
+}
+
+.nav-links a:not(.nav-cta).active {
+  color: var(--white);
+}
+
+.nav-cta {
+  background: var(--grad-pink) !important;
+  color: #fff !important;
+  padding: 0.42rem 1.15rem !important;
+  line-height: 1.35 !important;
+  border-radius: 8px !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  box-shadow: var(--shadow-pink) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast) !important;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(136, 19, 55, 0.5) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}

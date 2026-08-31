@@ -1,0 +1,114 @@
+/* ═══════════════════════════════════════════════════════
+   SERVICES SECTION
+   File: css/services.css
+═══════════════════════════════════════════════════════ */
+
+#services {
+  background: var(--bg-subtle);
+  position: relative;
+  overflow: hidden;
+  padding: 6.5rem 4.5%;
+}
+
+.services-header-area {
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.services-main-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  word-spacing: 0.16em;
+  max-width: 900px;
+  margin: 0 auto 0.85rem;
+}
+
+.services-headline-italic {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 40%, #fb7185 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0 0.08em;
+}
+
+.services-subtitle {
+  color: #94a3b8;
+  font-size: 0.98rem;
+  line-height: 1.68;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.35rem;
+}
+
+.service-card {
+  background: #08090d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.9rem 1.6rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  border-color: rgba(225, 29, 72, 0.4);
+  background: #0d0f15;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 28px rgba(190, 18, 60, 0.18);
+}
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.18rem;
+  color: #f1f5f9;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(190, 18, 60, 0.16);
+  border-color: rgba(225, 29, 72, 0.45);
+  color: var(--pink-light);
+  box-shadow: 0 0 20px rgba(190, 18, 60, 0.3);
+  transform: scale(1.06);
+}
+
+.service-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.service-card p {
+  color: #94a3b8;
+  font-size: 0.89rem;
+  line-height: 1.6;
+}

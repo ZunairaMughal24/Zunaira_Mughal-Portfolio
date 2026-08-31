@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════════════════
+   HERO SECTION
+   File: css/hero.css
+═══════════════════════════════════════════════════════ */
+
+#home {
+  min-height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 7.5rem 4.5% 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  flex: 1.2;
+  max-width: 640px;
+  padding-bottom: 7.5rem;
+}
+
+.hero-tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 3.6vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+
+.hero-tagline span.gradient-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-summary {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+/* Designer Action Buttons */
+.hero-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.btn-primary i {
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover i {
+  transform: translateX(3px);
+}
+
+.hero-social-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hero-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+}
+
+.hero-social-btn:hover {
+  border-color: var(--pink-border);
+  background: var(--pink-soft);
+  color: var(--pink-light);
+  transform: translateY(-2px);
+}
+
+.hero-social-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border);
+  margin: 0 0.2rem;
+}
+
+/* ── Hero Image & Dark Rose Circle ── */
+.hero-image-area {
+  position: relative;
+  flex-shrink: 0;
+  width: 620px;
+  height: 690px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.hero-rose-circle {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190, 18, 60, 0.24) 0%, rgba(136, 19, 55, 0.10) 65%, transparent 72%);
+  border: 1.5px solid rgba(225, 29, 72, 0.22);
+  box-shadow: 0 0 85px rgba(136, 19, 55, 0.22);
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-direct-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  margin-bottom: 0;
+  vertical-align: bottom;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+}

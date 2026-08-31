@@ -1,0 +1,55 @@
+/* ═══════════════════════════════════════════════════════
+   DESIGN TOKENS & VARIABLES
+   File: css/variables.css
+═══════════════════════════════════════════════════════ */
+
+:root {
+  /* Ultra-Clean Obsidian Dark Surfaces */
+  --bg:           #090a0d;
+  --bg-subtle:    #0f1115;
+  --bg-elevated:  #15171e;
+  --card:         rgba(18, 20, 26, 0.75);
+  --card-hover:   rgba(25, 28, 37, 0.92);
+  --card-border:  rgba(255, 255, 255, 0.08);
+  --card-border-hover: rgba(225, 29, 72, 0.38);
+
+  /* Refined Deep Crimson & Dark Rose Accent Palette */
+  --pink:         #be123c;
+  --pink-light:   #e11d48;
+  --pink-dark:    #881337;
+  --pink-soft:    rgba(190, 18, 60, 0.12);
+  --pink-border:  rgba(225, 29, 72, 0.32);
+  --pink-glow:    rgba(190, 18, 60, 0.22);
+
+  /* Gradients */
+  --grad-pink:    linear-gradient(135deg, #881337 0%, #be123c 55%, #e11d48 100%);
+  --grad-text:    linear-gradient(135deg, #ffffff 40%, #fb7185 100%);
+
+  /* Typography Colors */
+  --text:         #f8fafc;
+  --text-muted:   #cbd5e1;
+  --text-subtle:  #94a3b8;
+  --white:        #ffffff;
+
+  /* Neutral Glass Borders */
+  --border:        rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-pink:   rgba(225, 29, 72, 0.28);
+
+  /* Radii */
+  --radius-xs:    6px;
+  --radius-sm:    10px;
+  --radius-md:    16px;
+  --radius-lg:    24px;
+  --radius-full:  9999px;
+
+  /* Shadows */
+  --shadow-sm:    0 2px 10px rgba(0, 0, 0, 0.4);
+  --shadow-md:    0 10px 30px rgba(0, 0, 0, 0.55);
+  --shadow-lg:    0 20px 50px rgba(0, 0, 0, 0.75);
+  --shadow-pink:  0 8px 25px rgba(136, 19, 55, 0.38);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition:      0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,95 @@
+/* ═══════════════════════════════════════════════════════
+   ABOUT SECTION
+   File: css/about.css
+═══════════════════════════════════════════════════════ */
+
+#about {
+  background: var(--bg);
+}
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+}
+
+.about-image-side {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-avatar-frame {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190, 18, 60, 0.24) 0%, rgba(136, 19, 55, 0.10) 65%, transparent 75%);
+  border: 2px solid rgba(225, 29, 72, 0.28);
+  box-shadow: 0 0 55px rgba(136, 19, 55, 0.22), var(--shadow-md);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.about-avatar-frame:hover {
+  border-color: rgba(190, 18, 60, 0.5);
+  box-shadow: 0 0 75px rgba(76, 5, 25, 0.35), var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.about-avatar-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 120%, rgba(159, 18, 57, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+.about-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+}
+
+.about-text-side {
+  flex: 1;
+  max-width: 680px;
+  padding-left: 1rem;
+}
+
+.about-text-side .section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.1rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  color: var(--white);
+  margin-bottom: 1.3rem;
+}
+
+.about-text-side p {
+  color: #e2e8f0;
+  margin-bottom: 1.3rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-text-side p strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.about-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2.2rem;
+}

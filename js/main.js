@@ -58,10 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ── 4. ACTIVE NAV LINK HIGHLIGHT ── */
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const allNavLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+
+  allNavLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    } else if (!href.startsWith('#')) {
+      link.classList.remove('active');
+    }
+  });
+
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]:not(.nav-cta)');
 
-  if ('IntersectionObserver' in window && sections.length > 0) {
+  if ('IntersectionObserver' in window && sections.length > 0 && navAnchors.length > 0) {
     const activeLinkObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

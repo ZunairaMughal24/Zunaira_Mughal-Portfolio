@@ -1,0 +1,348 @@
+/* ═══════════════════════════════════════════════════════
+   PROJECTS SECTION (Modern Showcase)
+   File: css/projects.css
+═══════════════════════════════════════════════════════ */
+
+#projects {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  padding: 6.5rem 4.5%;
+}
+
+.projects-header-area {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.projects-main-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  word-spacing: 0.16em;
+  max-width: 900px;
+  margin: 0 auto 0.85rem;
+}
+
+.projects-headline-italic {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 40%, #fb7185 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0 0.08em;
+}
+
+.projects-subtitle {
+  color: #94a3b8;
+  font-size: 0.98rem;
+  line-height: 1.68;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.project-card {
+  background: #08090d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project-card:hover {
+  border-color: rgba(225, 29, 72, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 28px rgba(190, 18, 60, 0.18);
+}
+
+/* ── Realistic Mockup Banner ── */
+.project-mockup-banner {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem 1.2rem 0;
+}
+
+.project-canva-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px 22px 0 0;
+  z-index: 5;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-canva-img {
+  transform: scale(1.04);
+}
+
+/* Banner Gradients */
+.banner-resumate    { background: linear-gradient(135deg, #1d1333 0%, #29184d 50%, #361b66 100%); }
+.banner-montage     { background: linear-gradient(135deg, #0d2620 0%, #133a30 50%, #195244 100%); }
+.banner-furniture   { background: linear-gradient(135deg, #2b1f11 0%, #3d2a14 50%, #523719 100%); }
+.banner-medic       { background: linear-gradient(135deg, #0b1f2e 0%, #102e3b 50%, #153b47 100%); }
+.banner-collabtasker{ background: linear-gradient(135deg, #0f233a 0%, #143557 50%, #18446e 100%); }
+.banner-adhd        { background: linear-gradient(135deg, #26101f 0%, #3d1430 50%, #4e173d 100%); }
+
+/* Brand Badge inside Banner */
+.mockup-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+  z-index: 2;
+}
+
+.mockup-brand-icon {
+  font-size: 0.82rem;
+  color: #fff;
+}
+
+.mockup-brand-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+/* Phone Stage */
+.mockup-phones-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.65rem;
+  height: 180px;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-mockup {
+  background: #0d0f14;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.35rem 0.45rem 0;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.phone-mockup.phone-main {
+  width: 125px;
+  height: 165px;
+  z-index: 2;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.phone-mockup.phone-sub {
+  width: 95px;
+  height: 135px;
+  z-index: 1;
+  opacity: 0.82;
+}
+
+.phone-mockup.phone-sub.left {
+  transform: rotate(-6deg) translateY(6px);
+}
+
+.phone-mockup.phone-sub.right {
+  transform: rotate(6deg) translateY(6px);
+}
+
+.project-card:hover .phone-mockup.phone-main {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.project-card:hover .phone-mockup.phone-sub.left {
+  transform: rotate(-9deg) translateY(2px);
+}
+
+.project-card:hover .phone-mockup.phone-sub.right {
+  transform: rotate(9deg) translateY(2px);
+}
+
+.phone-notch {
+  width: 32px;
+  height: 5px;
+  background: #000;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.phone-screen-content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.screen-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.screen-avatar-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.screen-line {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+}
+
+.screen-line.w-40 { width: 40%; }
+.screen-line.w-50 { width: 50%; }
+.screen-line.w-60 { width: 60%; }
+.screen-line.w-70 { width: 70%; }
+.screen-line.w-75 { width: 75%; }
+.screen-line.w-80 { width: 80%; }
+
+.screen-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.screen-box.h-30 { height: 30px; }
+.screen-box.h-40 { height: 40px; }
+
+.screen-banner-card {
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.screen-banner-card.purple  { background: rgba(168, 85, 247, 0.22); border-color: rgba(168, 85, 247, 0.4); color: #d8b4fe; }
+.screen-banner-card.emerald { background: rgba(52, 211, 153, 0.22); border-color: rgba(52, 211, 153, 0.4); color: #6ee7b7; }
+.screen-banner-card.sky     { background: rgba(56, 189, 248, 0.22); border-color: rgba(56, 189, 248, 0.4); color: #7dd3fc; }
+.screen-banner-card.rose    { background: rgba(244, 63, 94, 0.22);  border-color: rgba(244, 63, 94, 0.4);  color: #fda4af; }
+.screen-banner-card.cyan    { background: rgba(6, 182, 212, 0.22);  border-color: rgba(6, 182, 212, 0.4);  color: #67e8f9; }
+.screen-banner-card.amber   { background: rgba(245, 158, 11, 0.22); border-color: rgba(245, 158, 11, 0.4); color: #fcd34d; }
+
+/* ── Project Body & Actions ── */
+.project-body {
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-body h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.14rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.project-body p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.62;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.85rem;
+}
+
+.stack-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  padding: 0.16rem 0.52rem;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover .stack-tag {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Action Buttons Row */
+.project-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.proj-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #f1f5f9;
+  padding: 0.38rem 0.75rem;
+  line-height: 1.35;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.25s ease;
+}
+
+.proj-action-btn:hover {
+  background: rgba(190, 18, 60, 0.16);
+  border-color: rgba(225, 29, 72, 0.45);
+  color: #fff;
+  transform: translateY(-2px);
+}
