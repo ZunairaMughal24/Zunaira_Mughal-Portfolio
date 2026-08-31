@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       phoneChassis.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
 
       if (phoneGlare) {
-        phoneGlare.style.background = `linear-gradient(${115 + x * 40}deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 40%, rgba(255,111,163,0.12) 65%, transparent 100%)`;
+        phoneGlare.style.background = `linear-gradient(${115 + x * 40}deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 40%, rgba(225,29,72,0.12) 65%, transparent 100%)`;
       }
 
       // Parallax displace floating badges
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const screen = phonePulseBtn.closest('.phone-screen-content');
       if (screen) {
         const icons = ['fa-heart', 'fa-wand-magic-sparkles', 'fa-bolt', 'fa-fire'];
-        const colors = ['#ff2d78', '#ff6fa3', '#38bdf8', '#fbbf24'];
+        const colors = ['#be123c', '#e11d48', '#38bdf8', '#fbbf24'];
 
         for (let i = 0; i < 4; i++) {
           setTimeout(() => {
