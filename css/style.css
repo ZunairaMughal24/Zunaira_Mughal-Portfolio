@@ -6,19 +6,19 @@
 ═══════════════════════════════════════════════════════ */
 
 /* ── Core Design Tokens & Foundations ── */
-@import url('variables.css');
-@import url('base.css');
+@import url('variables.css?v=2.0');
+@import url('base.css?v=2.0');
 
 /* ── Section Components ── */
-@import url('navbar.css');
-@import url('hero.css');
-@import url('showcase.css');
-@import url('about.css');
-@import url('skills.css');
-@import url('projects.css');
-@import url('services.css');
-@import url('testimonials.css');
-@import url('contact.css');
+@import url('navbar.css?v=2.0');
+@import url('hero.css?v=2.0');
+@import url('showcase.css?v=2.0');
+@import url('about.css?v=2.0');
+@import url('skills.css?v=2.0');
+@import url('projects.css?v=2.0');
+@import url('services.css?v=2.0');
+@import url('testimonials.css?v=2.0');
+@import url('contact.css?v=2.0');
 
 /* ── Global Responsive Breakpoints ── */
-@import url('responsive.css');
+@import url('responsive.css?v=2.0');

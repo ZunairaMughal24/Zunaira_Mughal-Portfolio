@@ -151,6 +151,7 @@ section {
   font-size: 0.90rem;
   transition: all var(--transition-fast);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-secondary svg,
@@ -171,9 +172,9 @@ section {
 
 .btn-secondary:hover,
 .btn-outline:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--pink);
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--pink) !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.28);
 }
@@ -184,8 +185,8 @@ section {
 .btn-outline:hover svg,
 .btn-outline:hover .btn-icon,
 .btn-outline:hover i {
-  stroke: var(--pink);
-  color: var(--pink);
+  stroke: var(--pink) !important;
+  color: var(--pink) !important;
   transform: translateY(1px);
 }
 
