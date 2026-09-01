@@ -105,71 +105,88 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.58rem;
   background: var(--grad-pink);
   color: #fff;
-  padding: 0.48rem 1.35rem;
+  padding: 0.58rem 1.45rem;
   line-height: 1.4;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.90rem;
   box-shadow: var(--shadow-pink);
   transition: all var(--transition-fast);
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(136, 19, 55, 0.45);
+  color: #fff;
 }
 
-.btn-secondary {
+.btn-primary i {
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover i {
+  transform: translateX(3px);
+}
+
+.btn-secondary,
+.btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.58rem;
   background: var(--card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   color: var(--text);
-  padding: 0.48rem 1.35rem;
-  line-height: 1.4;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.88rem;
-  transition: all var(--transition-fast);
-}
-
-.btn-secondary:hover {
-  background: var(--card-hover);
-  border-color: rgba(255, 255, 255, 0.22);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  border: 1px solid var(--pink-border);
-  background: var(--pink-soft);
-  color: var(--pink-light);
-  padding: 0.48rem 1.35rem;
+  padding: 0.58rem 1.45rem;
   line-height: 1.4;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.90rem;
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
+.btn-secondary svg,
+.btn-secondary .btn-icon,
+.btn-secondary i,
+.btn-outline svg,
+.btn-outline .btn-icon,
+.btn-outline i {
+  width: 16px;
+  height: 16px;
+  stroke: #fb7185;
+  color: #fb7185;
+  transition: transform var(--transition-fast), stroke var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-secondary:hover,
 .btn-outline:hover {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: #fff;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--pink);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-pink);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.28);
+}
+
+.btn-secondary:hover svg,
+.btn-secondary:hover .btn-icon,
+.btn-secondary:hover i,
+.btn-outline:hover svg,
+.btn-outline:hover .btn-icon,
+.btn-outline:hover i {
+  stroke: var(--pink);
+  color: var(--pink);
+  transform: translateY(1px);
 }
 
 /* ── Scroll Reveal Animations ── */
