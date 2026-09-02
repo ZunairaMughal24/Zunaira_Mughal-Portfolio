@@ -59,10 +59,19 @@
        HERO (Direct Image + Soft Rose Circle)
   ═══════════════════════════════════════ -->
   <section id="home">
-    <!-- Ambient Tech Grid & Ambient Glow Pattern -->
+    <!-- LAYER 1: Ambient Tech Grid Pattern & Glow (Base Background) -->
     <div class="hero-bg-pattern" aria-hidden="true"></div>
     <div class="hero-ambient-glow" aria-hidden="true"></div>
 
+    <!-- LAYER 2 & 3: Portrait Stage (Circle on Layer 2, Profile Photo on Layer 3) -->
+    <div class="hero-portrait-stage" aria-hidden="true">
+      <!-- LAYER 2: Glowing Circle (Blocks grid behind it) -->
+      <div class="hero-rose-circle"></div>
+      <!-- LAYER 3: Profile Photo (Sits on top of circle) -->
+      <img src="assets/profileS-removebg-preview.png" alt="Zunaira Mughal" class="hero-bg-photo" />
+    </div>
+
+    <!-- LAYER 4: Content (Text, Buttons, Social Links) -->
     <div class="hero-inner">
       <div class="hero-text">
         <h1 class="hero-tagline">Building robust, scalable mobile applications for <span class="gradient-text">iOS &amp; Android.</span></h1>
@@ -95,12 +104,6 @@
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
-      </div>
-
-      <!-- Direct Image on Page with Soft Rose Circle Behind -->
-      <div class="hero-image-area">
-        <div class="hero-rose-circle"></div>
-        <img src="assets/profileS-removebg-preview.png" alt="Zunaira Mughal — Flutter Developer" class="hero-direct-img" />
       </div>
     </div>
   </section>
