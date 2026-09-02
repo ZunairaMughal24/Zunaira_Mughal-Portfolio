@@ -17,7 +17,7 @@
 .hero-bg-pattern {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 52px 52px;
@@ -64,7 +64,7 @@
   background: radial-gradient(circle, rgba(255, 111, 163, 0.20) 0%, rgba(255, 45, 120, 0.08) 65%, transparent 72%);
   border: 1px solid rgba(255, 111, 163, 0.22);
   box-shadow: 0 0 70px rgba(255, 45, 120, 0.20);
-  top: 52%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -80,7 +80,7 @@
   object-position: bottom center;
   transform: scale(1.18);
   transform-origin: bottom center;
-  opacity: 0.98;
+  opacity: 0.90;
   filter: contrast(1.05) saturate(1.12) brightness(0.98) drop-shadow(0 15px 35px rgba(0, 0, 0, 0.7));
   transition: all 0.4s ease;
   z-index: 2;
