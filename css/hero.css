@@ -10,6 +10,34 @@
   padding: 7.5rem 4.5% 0;
   position: relative;
   overflow: hidden;
+  background-color: var(--bg);
+}
+
+/* ── Ambient Background Tech Grid Pattern & Light Effects ── */
+.hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 25%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 25%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  top: -15%;
+  left: 20%;
+  width: 650px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190, 18, 60, 0.16) 0%, rgba(225, 29, 72, 0.05) 50%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
