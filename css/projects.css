@@ -77,7 +77,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 1.1rem 1.2rem 0;
 }
 
@@ -102,7 +102,8 @@
 .banner-furniture   { background: linear-gradient(135deg, #2b1f11 0%, #3d2a14 50%, #523719 100%); }
 .banner-medic       { background: linear-gradient(135deg, #0b1f2e 0%, #102e3b 50%, #153b47 100%); }
 .banner-collabtasker{ background: linear-gradient(135deg, #0f233a 0%, #143557 50%, #18446e 100%); }
-.banner-adhd        { background: linear-gradient(135deg, #26101f 0%, #3d1430 50%, #4e173d 100%); }
+.banner-adhd,
+.banner-smartoverlay{ background: linear-gradient(135deg, #26101f 0%, #3d1430 50%, #4e173d 100%); }
 
 /* Brand Badge inside Banner */
 .mockup-brand-badge {
