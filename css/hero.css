@@ -33,9 +33,9 @@
 .hero-tagline {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.2rem, 3.6vw, 3.1rem);
-  font-weight: 800;
-  line-height: 1.16;
-  letter-spacing: -0.035em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 1.2rem;
 }
