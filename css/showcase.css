@@ -34,7 +34,7 @@
 .showcase-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.1rem, 3.8vw, 3rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--white);
   line-height: 1.2;
   letter-spacing: -0.025em;
@@ -45,7 +45,7 @@
 .showcase-italic {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   background: linear-gradient(135deg, #ffffff 30%, #fb7185 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -177,7 +177,7 @@
 .badge-primary-txt {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -352,7 +352,7 @@
 .app-user-name {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
 }
 
@@ -406,7 +406,7 @@
 .metric-growth-pill {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #4ade80;
   background: rgba(34, 197, 94, 0.12);
   padding: 0.1rem 0.4rem;
@@ -416,7 +416,7 @@
 .metric-main-val {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   letter-spacing: -0.02em;
 }
@@ -486,7 +486,7 @@
 .mini-card-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.64rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
 }
 
@@ -512,7 +512,7 @@
   border-radius: 12px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
