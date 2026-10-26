@@ -10,47 +10,25 @@
   }
 
   #home {
-    padding: 6.5rem 4% 0;
-  }
-
-  .hero-portrait-stage {
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 70vh;
-  }
-
-  .hero-rose-circle {
-    width: 380px;
-    height: 380px;
-    opacity: 0.55;
-  }
-
-  .hero-bg-photo {
-    opacity: 0.38;
+    padding: 7rem 4% 3.5rem;
   }
 
   .hero-inner {
-    flex-direction: column-reverse;
     text-align: center;
-    gap: 3rem;
+    justify-content: center;
   }
 
   .hero-text {
-    width: 100%;
     max-width: 100%;
-    flex: 0 0 100%;
+    margin: 0 auto;
   }
 
-  .hero-text p {
+  .hero-summary {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .hero-btns,
+  .hero-actions,
   .hero-social-row {
     justify-content: center;
   }
@@ -168,6 +146,14 @@
 @media (max-width: 520px) {
   section {
     padding: 4.5rem 5%;
+  }
+
+  #home {
+    padding: 6.2rem 4% 3rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.95rem;
   }
 
   .about-avatar-frame {
