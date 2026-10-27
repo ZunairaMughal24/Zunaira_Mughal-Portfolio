@@ -31,7 +31,7 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css?v=2.0"/>
 </head>
-<body>
+<body class="homepage">
 
   <!-- ═══════════════════════════════════════
        NAVIGATION
@@ -44,12 +44,12 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Tools</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#packages" class="nav-cta"><i class="fa-regular fa-paper-plane"></i> Work With Me</a></li>
+      <li><a href="#services" class="nav-cta"><i class="fa-regular fa-paper-plane"></i> Work With Me</a></li>
     </ul>
     <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
@@ -71,7 +71,7 @@
         <p class="hero-summary">From first idea to production release, I create polished Flutter applications for iOS and Android—combining thoughtful interfaces with reliable engineering.</p>
 
         <div class="hero-actions">
-          <a href="#packages" class="btn-primary">
+          <a href="#services" class="btn-primary">
             <span>View Services</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -293,7 +293,7 @@
           <h3 class="about-subheading">What I focus on</h3>
           <p>Simple user experiences, reliable performance, and practical solutions that support the goals of the product.</p>
           <div class="about-btns">
-            <a href="#packages" class="btn-primary">
+            <a href="#services" class="btn-primary">
               <span>View Services</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -757,108 +757,16 @@
   <!-- ═══════════════════════════════════════
        SERVICES
   ═══════════════════════════════════════ -->
-  <section id="services">
+  <section id="services" class="packages-section">
     <div class="section-inner">
-      
-      <!-- Centered Header -->
       <div class="services-header-area reveal">
         <span class="section-tag">SERVICES</span>
-        <h2 class="services-main-title">
-          How I can <span class="services-headline-italic">help.</span>
-        </h2>
-        <p class="services-subtitle">Practical support for building a new app, improving an existing one, or delivering a focused feature.</p>
+        <h2 class="services-main-title">Ways to <span class="services-headline-italic">work with me.</span></h2>
+        <p class="services-subtitle">Choose the kind of support that fits your product, from a new build to focused technical help.</p>
       </div>
 
-      <!-- 4-Column / 8-Card Services Grid -->
-      <div class="services-grid reveal">
-        
-        <!-- Card 1: Flutter app development -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-mobile-screen"></i>
-          </div>
-          <h3>Flutter App Development</h3>
-          <p>Production-ready iOS and Android applications built from one maintainable Flutter codebase.</p>
-        </div>
-
-        <!-- Card 2: MVP & custom builds -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-cube"></i>
-          </div>
-          <h3>MVP &amp; Product Builds</h3>
-          <p>Focused product development that turns your core requirements into a testable first release.</p>
-        </div>
-
-        <!-- Card 3: AI-powered features -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <h3>AI Feature Integration</h3>
-          <p>Practical text, image, and assistant features integrated with clear loading, error, and fallback states.</p>
-        </div>
-
-        <!-- Card 4: Firebase & backend -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-database"></i>
-          </div>
-          <h3>Firebase &amp; Backend</h3>
-          <p>Authentication, databases, storage, cloud functions, notifications, and analytics configured for your app.</p>
-        </div>
-
-        <!-- Card 5: API integration -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-code"></i>
-          </div>
-          <h3>API Integration</h3>
-          <p>Reliable REST, WebSocket, and third-party service integrations with proper error handling.</p>
-        </div>
-
-        <!-- Card 6: Pixel-perfect UI development -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-regular fa-credit-card"></i>
-          </div>
-          <h3>Design-to-Flutter UI</h3>
-          <p>Accurate implementation of your designs across screen sizes, themes, and interaction states.</p>
-        </div>
-
-        <!-- Card 7: Performance optimisation -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <h3>Performance Optimisation</h3>
-          <p>Targeted improvements to startup time, scrolling, rebuilds, memory use, and overall responsiveness.</p>
-        </div>
-
-        <!-- Card 8: Deployment & maintenance -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-          </div>
-          <h3>Release &amp; Maintenance</h3>
-          <p>Store preparation, release support, version updates, and ongoing improvements after launch.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider"/>
-
-  <section id="packages" class="packages-section">
-    <div class="section-inner">
-      <div class="services-header-area reveal">
-        <span class="section-tag">WAYS TO WORK TOGETHER</span>
-        <h2 class="services-main-title">A clear way to <span class="services-headline-italic">get started.</span></h2>
-        <p class="services-subtitle">Every build is scoped around your goals, timeline, and existing product. You receive a clear proposal before development begins.</p>
-      </div>
-
-      <div class="packages-grid reveal">
+      <div class="packages-carousel reveal" aria-label="Services carousel">
+      <div class="packages-grid" id="servicesTrack">
         <article class="package-card">
           <div class="package-icon"><i class="fa-solid fa-rocket"></i></div>
           <span class="package-number">01</span>
@@ -904,6 +812,57 @@
           </ul>
           <a href="#contact" class="package-cta">Request an Audit <i class="fa-solid fa-arrow-right"></i></a>
         </article>
+
+        <article class="package-card">
+          <div class="package-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <span class="package-number">04</span>
+          <h3>Features &amp; Integrations</h3>
+          <p class="package-for">For products that need new capabilities</p>
+          <p class="package-price"><span>INCLUDES</span> APIs, AI, Firebase, and payments</p>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-check"></i><span>Third-party API integration</span></li>
+            <li><i class="fa-solid fa-check"></i><span>AI-powered product features</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Authentication and cloud data</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Clear loading and error states</span></li>
+          </ul>
+          <a href="#contact" class="package-cta">Discuss a Feature <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="package-card">
+          <div class="package-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <span class="package-number">05</span>
+          <h3>Design to Flutter</h3>
+          <p class="package-for">For teams with completed UI designs</p>
+          <p class="package-price"><span>INCLUDES</span> Responsive interface development</p>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-check"></i><span>Accurate design implementation</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Responsive layouts and themes</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Animations and interaction states</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Reusable UI components</span></li>
+          </ul>
+          <a href="#contact" class="package-cta">Share Your Designs <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="package-card">
+          <div class="package-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+          <span class="package-number">06</span>
+          <h3>Launch &amp; Maintenance</h3>
+          <p class="package-for">For apps preparing to launch or grow</p>
+          <p class="package-price"><span>INCLUDES</span> Release and ongoing support</p>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-check"></i><span>Store release preparation</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Performance improvements</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Bug fixes and version updates</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Ongoing product maintenance</span></li>
+          </ul>
+          <a href="#contact" class="package-cta">Discuss Support <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+      </div>
+      <div class="packages-controls" aria-label="Service navigation">
+        <button class="packages-arrow" id="servicesPrev" type="button" aria-label="Show previous services"><i class="fa-solid fa-arrow-left"></i></button>
+        <span class="packages-page" id="servicesPage" aria-live="polite">1 / 2</span>
+        <button class="packages-arrow" id="servicesNext" type="button" aria-label="Show next services"><span>More services</span><i class="fa-solid fa-arrow-right"></i></button>
       </div>
       <p class="packages-note">Not sure which option fits? <a href="#contact">Tell me what you are building</a> and I’ll recommend the right approach.</p>
     </div>

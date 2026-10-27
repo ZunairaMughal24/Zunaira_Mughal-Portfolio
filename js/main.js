@@ -5,6 +5,59 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* Services carousel */
+  const servicesTrack = document.getElementById('servicesTrack');
+  const servicesPrev = document.getElementById('servicesPrev');
+  const servicesNext = document.getElementById('servicesNext');
+  const servicesPage = document.getElementById('servicesPage');
+  const servicesCarousel = servicesTrack?.closest('.packages-carousel');
+
+  if (servicesTrack && servicesPrev && servicesNext && servicesPage && servicesCarousel) {
+    let currentPage = 0;
+    let touchStartX = 0;
+    const cardsPerPage = () => window.innerWidth <= 960 ? 1 : 3;
+    const pageCount = () => Math.ceil(servicesTrack.children.length / cardsPerPage());
+
+    const updateServicesCarousel = () => {
+      const pages = pageCount();
+      currentPage = Math.min(currentPage, pages - 1);
+      const gap = parseFloat(getComputedStyle(servicesTrack).columnGap) || 0;
+      const card = servicesTrack.firstElementChild;
+      const distance = card ? (card.getBoundingClientRect().width + gap) * cardsPerPage() : 0;
+      servicesTrack.style.transform = `translateX(-${currentPage * distance}px)`;
+      servicesPage.textContent = `${currentPage + 1} / ${pages}`;
+      servicesPrev.disabled = currentPage === 0;
+      servicesNext.disabled = currentPage === pages - 1;
+      servicesNext.querySelector('span').textContent = currentPage === pages - 1 ? 'All services' : 'More services';
+    };
+
+    servicesPrev.addEventListener('click', () => {
+      currentPage = Math.max(0, currentPage - 1);
+      updateServicesCarousel();
+    });
+
+    servicesNext.addEventListener('click', () => {
+      currentPage = Math.min(pageCount() - 1, currentPage + 1);
+      updateServicesCarousel();
+    });
+
+    servicesCarousel.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+
+    servicesCarousel.addEventListener('touchend', event => {
+      const distance = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(distance) < 50) return;
+      currentPage = distance < 0
+        ? Math.min(pageCount() - 1, currentPage + 1)
+        : Math.max(0, currentPage - 1);
+      updateServicesCarousel();
+    }, { passive: true });
+
+    window.addEventListener('resize', updateServicesCarousel);
+    updateServicesCarousel();
+  }
+
   /* ── 1. MOBILE NAVIGATION TOGGLE ── */
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
