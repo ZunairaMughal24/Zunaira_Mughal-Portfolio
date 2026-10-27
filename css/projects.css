@@ -7,7 +7,7 @@
   background: var(--bg);
   position: relative;
   overflow: hidden;
-  padding: 6.5rem 4.5%;
+  padding: 6rem 4.5%;
 }
 
 .projects-header-area {
@@ -22,7 +22,7 @@
   color: var(--white);
   line-height: 1.25;
   letter-spacing: -0.02em;
-  word-spacing: 0.16em;
+  word-spacing: normal;
   max-width: 900px;
   margin: 0 auto 0.85rem;
 }
@@ -49,15 +49,15 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
+  gap: 1.35rem;
 }
 
 .project-card {
   background: #08090d;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
@@ -66,8 +66,8 @@
 
 .project-card:hover {
   border-color: rgba(225, 29, 72, 0.4);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 28px rgba(190, 18, 60, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.42), 0 0 24px rgba(190, 18, 60, 0.1);
 }
 
 /* ── Realistic Mockup Banner ── */
@@ -87,7 +87,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 22px 22px 0 0;
+  border-radius: 15px 15px 0 0;
   z-index: 5;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -282,8 +282,8 @@
 
 .project-body p {
   color: #94a3b8;
-  font-size: 0.9rem;
-  line-height: 1.62;
+  font-size: 0.92rem;
+  line-height: 1.65;
   margin-bottom: 1.2rem;
   flex: 1;
 }
@@ -332,10 +332,11 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: #f1f5f9;
-  padding: 0.38rem 0.75rem;
+  min-height: 42px;
+  padding: 0.58rem 0.75rem;
   line-height: 1.35;
   border-radius: 8px;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
   font-family: 'Plus Jakarta Sans', sans-serif;
   transition: all 0.25s ease;

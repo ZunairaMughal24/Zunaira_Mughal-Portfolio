@@ -10,7 +10,7 @@
 .about-layout {
   display: flex;
   align-items: center;
-  gap: 4.5rem;
+  gap: clamp(2.5rem, 6vw, 5rem);
 }
 
 .about-image-side {
@@ -22,12 +22,12 @@
 
 .about-avatar-frame {
   position: relative;
-  width: 410px;
-  height: 410px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 111, 163, 0.28) 0%, rgba(255, 45, 120, 0.12) 65%, transparent 75%);
-  border: 2px solid rgba(255, 111, 163, 0.4);
-  box-shadow: 0 0 65px rgba(255, 45, 120, 0.3), var(--shadow-md);
+  border: 1px solid rgba(255, 111, 163, 0.35);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35), 0 0 45px rgba(255, 45, 120, 0.14);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -37,7 +37,7 @@
 
 .about-avatar-frame:hover {
   border-color: rgba(255, 111, 163, 0.7);
-  box-shadow: 0 0 90px rgba(255, 45, 120, 0.5), var(--shadow-lg);
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.42), 0 0 55px rgba(255, 45, 120, 0.2);
   transform: translateY(-4px);
 }
 
@@ -61,7 +61,7 @@
 .about-text-side {
   flex: 1;
   max-width: 680px;
-  padding-left: 1rem;
+  padding-left: 0;
 }
 
 .about-text-side .section-title {
@@ -75,10 +75,10 @@
 }
 
 .about-text-side p {
-  color: #e2e8f0;
-  margin-bottom: 1.3rem;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.72;
 }
 
 .about-text-side p strong {
@@ -92,4 +92,20 @@
   flex-wrap: wrap;
   align-items: center;
   margin-top: 2.2rem;
+}
+
+.about-text-side .about-intro {
+  margin-bottom: 1.65rem;
+  color: #f1f5f9;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.about-subheading {
+  margin: 1.75rem 0 0.65rem;
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.35;
 }

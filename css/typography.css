@@ -1,0 +1,103 @@
+:root {
+  --type-section: clamp(2rem, 3.5vw, 3rem);
+  --type-card: 1.08rem;
+  --type-body: 1rem;
+  --type-small: 0.9rem;
+}
+
+.showcase-title,
+.about-text-side .section-title,
+.tools-main-title,
+.services-main-title,
+.testimonials-main-title,
+.contact-headline {
+  max-width: 780px;
+  margin: 0 auto 0.9rem;
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: var(--type-section);
+  font-weight: 650;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+  word-spacing: normal;
+}
+
+.about-text-side .section-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-text-side p {
+  max-width: 62ch;
+}
+
+.contact-tag-label {
+  color: #fb7185;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.showcase-italic,
+.tools-headline-italic,
+.projects-headline-italic,
+.services-headline-italic,
+.testimonials-headline-italic,
+.contact-headline-italic {
+  font-style: normal;
+}
+
+.tools-header-subtitle,
+.projects-subtitle,
+.services-subtitle,
+.testimonials-subtitle,
+.contact-result-subtitle,
+.section-sub {
+  max-width: 640px;
+  color: #aeb8c8;
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.service-card h3,
+.package-card h3,
+.author-name,
+.contact-result-title {
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: var(--type-card);
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.service-card p,
+.package-for,
+.package-list li,
+.testimonial-quote {
+  color: #aeb8c8;
+  font-size: var(--type-small);
+  line-height: 1.65;
+}
+
+button,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.proj-action-btn,
+.package-cta,
+.btn-email-primary,
+.nav-cta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 520px) {
+  :root {
+    --type-section: 1.85rem;
+    --type-card: 1.02rem;
+  }
+}

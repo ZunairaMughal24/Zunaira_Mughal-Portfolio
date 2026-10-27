@@ -18,8 +18,8 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -42,14 +42,31 @@ ul {
 
 /* ── Global Section Layouts ── */
 section {
-  padding: 6.5rem 4.5%;
+  padding: 6rem 4.5%;
   position: relative;
   z-index: 1;
 }
 
 .section-inner {
-  max-width: 1240px;
+  width: 100%;
+  max-width: 1180px;
   margin: 0 auto;
+}
+
+.standalone-page-section {
+  min-height: 80vh;
+  padding-top: 8.5rem;
+}
+
+.standalone-page-section.centered-section {
+  display: flex;
+  align-items: center;
+}
+
+.standalone-page-section.centered-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-header {
@@ -68,17 +85,17 @@ section {
 .section-tag {
   display: inline-block;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #555d6e;
-  margin-bottom: 1rem;
+  color: #fb7185;
+  margin-bottom: 0.85rem;
 }
 
 .section-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(1.75rem, 2.8vw, 2.3rem);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 600;
   color: var(--white);
   line-height: 1.25;
@@ -108,9 +125,10 @@ section {
   gap: 0.58rem;
   background: var(--grad-pink);
   color: #fff;
-  padding: 0.58rem 1.45rem;
+  min-height: 46px;
+  padding: 0.72rem 1.35rem;
   line-height: 1.4;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 0.90rem;
   box-shadow: var(--shadow-pink);
@@ -144,9 +162,10 @@ section {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   color: var(--text);
-  padding: 0.58rem 1.45rem;
+  min-height: 46px;
+  padding: 0.72rem 1.35rem;
   line-height: 1.4;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 0.90rem;
   transition: all var(--transition-fast);
@@ -200,4 +219,18 @@ section {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(251, 113, 133, 0.65);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -5,11 +5,11 @@
 ═══════════════════════════════════════════════════════ */
 
 #home {
-  min-height: 85vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 4.5% 4rem;
+  padding: 8.5rem 4.5% 5rem;
   position: relative;
   overflow: hidden;
   background-color: var(--bg);
@@ -57,7 +57,7 @@
 }
 
 .hero-text {
-  max-width: 820px;
+  max-width: 960px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -66,14 +66,37 @@
   margin: 0 auto;
 }
 
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+  color: #cbd5e1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fb7185;
+  box-shadow: 0 0 0 5px rgba(251, 113, 133, 0.1);
+}
+
 .hero-tagline {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(2.3rem, 3.8vw, 3.4rem);
+  max-width: 880px;
+  font-size: clamp(2.55rem, 5.1vw, 4.65rem);
   font-weight: 700;
-  line-height: 1.22;
-  letter-spacing: -0.025em;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
   color: var(--white);
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.4rem;
   text-align: center;
 }
 
@@ -85,11 +108,11 @@
 }
 
 .hero-summary {
-  color: #cbd5e1;
-  font-size: 1.08rem;
-  line-height: 1.8;
+  color: #aeb8c8;
+  font-size: 1.05rem;
+  line-height: 1.7;
   margin-bottom: 2.2rem;
-  max-width: 720px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
