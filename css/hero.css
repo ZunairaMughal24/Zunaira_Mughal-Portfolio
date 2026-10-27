@@ -147,8 +147,8 @@
 .hero-social-btn {
   width: 38px;
   height: 38px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
+  border-radius: 50%;
+  border: 1px solid #252936;
   background: #151821;
   display: flex;
   align-items: center;
@@ -159,11 +159,19 @@
 }
 
 .hero-social-btn:hover {
-  border-color: var(--pink-border);
-  background: var(--pink-soft);
-  color: var(--pink-light);
+  border-color: #be123c;
+  background: #be123c;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(190, 18, 60, 0.2);
+}
+
+.hero-social-btn:active {
+  border-color: #9f1239;
+  background: #9f1239;
+  color: #ffffff;
+  transform: scale(0.96);
+  box-shadow: none;
 }
 
 .hero-social-divider {

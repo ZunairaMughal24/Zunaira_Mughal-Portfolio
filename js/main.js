@@ -105,6 +105,59 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── 1. MOBILE NAVIGATION TOGGLE ── */
+  /* Testimonial detail modal */
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  if (testimonialCards.length) {
+    const modal = document.createElement('div');
+    modal.className = 'testimonial-modal';
+    modal.setAttribute('aria-hidden', 'true');
+    modal.innerHTML = `
+      <div class="testimonial-modal-dialog" role="dialog" aria-modal="true" aria-label="Client testimonial">
+        <button class="testimonial-modal-close" type="button" aria-label="Close testimonial">&times;</button>
+        <div class="testimonial-modal-mark" aria-hidden="true">“</div>
+        <p class="testimonial-modal-quote"></p>
+        <div class="testimonial-modal-author"><img src="" alt=""><div><strong></strong><span></span></div></div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    const closeButton = modal.querySelector('.testimonial-modal-close');
+    const closeTestimonial = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('testimonial-open');
+    };
+    const openTestimonial = card => {
+      const image = card.querySelector('.testimonial-avatar-img');
+      modal.querySelector('.testimonial-modal-quote').textContent = card.querySelector('.testimonial-quote')?.textContent || '';
+      modal.querySelector('.testimonial-modal-author strong').textContent = card.querySelector('.author-name')?.textContent || '';
+      modal.querySelector('.testimonial-modal-author span').textContent = card.querySelector('.author-role')?.textContent || '';
+      modal.querySelector('.testimonial-modal-author img').src = image?.src || '';
+      modal.querySelector('.testimonial-modal-author img').alt = image?.alt || '';
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('testimonial-open');
+      closeButton.focus();
+    };
+
+    testimonialCards.forEach(card => {
+      if (!card.hasAttribute('aria-hidden')) card.tabIndex = 0;
+      card.addEventListener('click', () => openTestimonial(card));
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openTestimonial(card);
+        }
+      });
+    });
+    closeButton.addEventListener('click', closeTestimonial);
+    modal.addEventListener('click', event => {
+      if (event.target === modal) closeTestimonial();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && modal.classList.contains('is-open')) closeTestimonial();
+    });
+  }
+
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
 

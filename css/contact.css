@@ -194,11 +194,14 @@
 }
 
 @keyframes star-bling {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.15;
     transform: scale(0.65) rotate(0deg);
     filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.3));
   }
+
   50% {
     opacity: 1;
     transform: scale(1.15) rotate(90deg);
@@ -281,23 +284,51 @@
 
 /* Pill Floating Drift Keyframes */
 @keyframes float-drift-1 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(6px, -10px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(6px, -10px);
+  }
 }
 
 @keyframes float-drift-2 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-8px, 8px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-8px, 8px);
+  }
 }
 
 @keyframes float-drift-3 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(8px, -8px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(8px, -8px);
+  }
 }
 
 @keyframes float-drift-4 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-6px, -6px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-6px, -6px);
+  }
 }
 
 /* ── Right Column: Info & Action Buttons ── */
@@ -339,25 +370,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.38rem 1.25rem;
+  min-height: 40px;
+  padding: 0.5rem 1.35rem;
   line-height: 1.4;
-  background: #ffffff;
-  color: #090a0f;
+  background: #be123c;
+  color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 0;
   text-decoration: none;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.12);
+  box-shadow: none;
   cursor: pointer;
 }
 
 .btn-email-primary:hover {
-  background: #f1f5f9;
-  color: #000000;
+  background: #9f1239;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.28);
+  box-shadow: 0 8px 22px rgba(190, 18, 60, 0.28);
 }
 
 /* Square Icon Social Buttons */
