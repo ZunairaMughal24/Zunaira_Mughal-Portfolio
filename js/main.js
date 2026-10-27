@@ -108,6 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Testimonial detail modal */
   const testimonialCards = document.querySelectorAll('.testimonial-card');
   if (testimonialCards.length) {
+    testimonialCards.forEach(card => {
+      const quote = card.querySelector('.testimonial-quote');
+      if (quote && !card.querySelector('.testimonial-rating')) {
+        quote.insertAdjacentHTML('beforebegin', '<div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>');
+      }
+    });
+
     const modal = document.createElement('div');
     modal.className = 'testimonial-modal';
     modal.setAttribute('aria-hidden', 'true');
@@ -115,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="testimonial-modal-dialog" role="dialog" aria-modal="true" aria-label="Client testimonial">
         <button class="testimonial-modal-close" type="button" aria-label="Close testimonial">&times;</button>
         <div class="testimonial-modal-mark" aria-hidden="true">“</div>
+        <div class="testimonial-modal-rating" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="testimonial-modal-quote"></p>
         <div class="testimonial-modal-author"><img src="" alt=""><div><strong></strong><span></span></div></div>
       </div>`;

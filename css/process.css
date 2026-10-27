@@ -19,17 +19,20 @@
   margin: 1rem 0 1.5rem;
   color: var(--white);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(2.7rem, 5vw, 4.7rem);
-  font-weight: 600;
+  font-size: clamp(2.35rem, 4.4vw, 4rem);
+  font-weight: 550;
   line-height: 1.04;
   letter-spacing: -0.05em;
 }
 
 .process-title span {
   display: block;
-  color: #b8c2d1;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .process-intro > p {
@@ -95,7 +98,7 @@
 
 .process-list h3 {
   margin: 0;
-  color: #7f8490;
+  color: var(--white);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.05rem, 1.7vw, 1.35rem);
   font-weight: 600;
@@ -105,11 +108,21 @@
 
 .process-meta {
   margin: 0;
-  color: #666b75;
+  color: #cbd5e1;
   font-size: 0.82rem;
   font-style: italic;
   white-space: nowrap;
   transition: color 0.25s ease;
+}
+
+.process-list:has(li:hover) li:not(:hover) h3,
+.process-list:has(li:focus-visible) li:not(:focus-visible) h3 {
+  color: #525762;
+}
+
+.process-list:has(li:hover) li:not(:hover) .process-meta,
+.process-list:has(li:focus-visible) li:not(:focus-visible) .process-meta {
+  color: #4a4f59;
 }
 
 .process-description {

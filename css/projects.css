@@ -342,6 +342,10 @@
   transition: all 0.25s ease;
 }
 
+.proj-action-btn i {
+  display: none;
+}
+
 .proj-action-btn:hover {
   background: #be123c;
   border-color: rgba(225, 29, 72, 0.45);

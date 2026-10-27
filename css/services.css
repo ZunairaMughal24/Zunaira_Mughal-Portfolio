@@ -173,6 +173,18 @@
   border-radius: 50%;
 }
 
+#servicesNext {
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+#servicesNext span {
+  display: none;
+}
+
 .package-card {
   position: relative;
   display: flex;
@@ -239,11 +251,17 @@
   display: none;
 }
 
-.package-card h3 {
+.packages-grid .package-card h3 {
   margin: 0 0 0.45rem;
   color: var(--white);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.22rem;
+  font-size: 1.18rem;
+  transition: color 0.25s ease;
+}
+
+.package-card:hover h3,
+.package-card:focus-within h3 {
+  color: #fb7185;
 }
 
 .package-for {
@@ -310,6 +328,15 @@
   font-weight: 700;
   text-decoration: none;
   transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.package-cta i,
+#servicesNext i {
+  display: none;
+}
+
+#servicesNext i {
+  display: inline-block;
 }
 
 .package-featured .package-cta,

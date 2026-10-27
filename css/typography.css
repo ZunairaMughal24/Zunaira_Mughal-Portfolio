@@ -1,13 +1,14 @@
 :root {
-  --type-section: clamp(2rem, 3.5vw, 3rem);
-  --type-card: 1.08rem;
-  --type-body: 1rem;
-  --type-small: 0.9rem;
+  --type-section: clamp(1.85rem, 3vw, 2.55rem);
+  --type-card: 1rem;
+  --type-body: 0.95rem;
+  --type-small: 0.84rem;
 }
 
 .showcase-title,
 .about-text-side .section-title,
 .tools-main-title,
+.projects-main-title,
 .services-main-title,
 .testimonials-main-title,
 .contact-headline {
@@ -16,7 +17,7 @@
   color: var(--white);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: var(--type-section);
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.14;
   letter-spacing: -0.035em;
   word-spacing: normal;
@@ -46,7 +47,7 @@
 .testimonials-headline-italic,
 .contact-headline-italic {
   font-style: italic;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .tools-header-subtitle,
@@ -69,7 +70,7 @@
   color: var(--white);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: var(--type-card);
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.015em;
 }

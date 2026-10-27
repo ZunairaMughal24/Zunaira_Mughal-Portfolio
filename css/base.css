@@ -170,11 +170,15 @@ section {
 }
 
 .btn-primary i {
-  transition: transform var(--transition-fast);
+  display: none;
 }
 
 .btn-primary:hover i {
   transform: translateX(3px);
+}
+
+.about-btns .btn-outline i {
+  display: none;
 }
 
 .btn-secondary,
