@@ -329,7 +329,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: #151821;
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: #f1f5f9;
   min-height: 42px;
@@ -343,7 +343,7 @@
 }
 
 .proj-action-btn:hover {
-  background: rgba(190, 18, 60, 0.16);
+  background: #be123c;
   border-color: rgba(225, 29, 72, 0.45);
   color: #fff;
   transform: translateY(-2px);

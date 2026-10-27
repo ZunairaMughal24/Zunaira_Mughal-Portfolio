@@ -45,7 +45,7 @@
 .services-headline-italic,
 .testimonials-headline-italic,
 .contact-headline-italic {
-  font-style: normal;
+  font-style: italic;
 }
 
 .tools-header-subtitle,
@@ -71,6 +71,39 @@
   font-weight: 650;
   line-height: 1.35;
   letter-spacing: -0.015em;
+}
+
+/* Consistent, restrained surfaces across the portfolio. */
+.service-card,
+.package-card,
+.project-card,
+.testimonial-card,
+.contact-collab-card,
+.contact-result-card,
+.showcase-content {
+  border-radius: 8px;
+}
+
+.project-canva-img {
+  border-radius: 8px 8px 0 0;
+}
+
+/* Keep supporting copy comfortably readable against dark surfaces. */
+.hero-summary,
+.about-text-side p,
+.tools-header-subtitle,
+.projects-subtitle,
+.services-subtitle,
+.testimonials-subtitle,
+.service-card p,
+.package-for,
+.package-list,
+.project-description,
+.testimonial-text,
+.author-role,
+.contact-result-subtitle,
+.packages-note {
+  color: #b8c2d1;
 }
 
 .service-card p,

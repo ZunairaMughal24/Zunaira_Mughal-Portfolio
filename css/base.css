@@ -34,11 +34,12 @@ body {
 .homepage #home { order: 1; }
 .homepage #about { order: 2; }
 .homepage #services { order: 3; }
-.homepage #projects { order: 4; }
-.homepage #skills { order: 5; }
-.homepage #testimonials { order: 7; }
-.homepage #contact { order: 8; }
-.homepage footer { order: 9; }
+.homepage #process { order: 4; }
+.homepage #projects { order: 5; }
+.homepage #skills { order: 6; }
+.homepage #testimonials { order: 8; }
+.homepage #contact { order: 9; }
+.homepage footer { order: 10; }
 
 .homepage #showcase,
 .homepage > .divider {
@@ -150,8 +151,8 @@ section {
   gap: 0.58rem;
   background: var(--grad-pink);
   color: #fff;
-  min-height: 46px;
-  padding: 0.72rem 1.35rem;
+  min-height: 40px;
+  padding: 0.55rem 1.25rem;
   line-height: 1.4;
   border-radius: 10px;
   font-weight: 600;
@@ -182,13 +183,11 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.58rem;
-  background: var(--card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #151821;
   border: 1px solid var(--border);
   color: var(--text);
-  min-height: 46px;
-  padding: 0.72rem 1.35rem;
+  min-height: 40px;
+  padding: 0.55rem 1.25rem;
   line-height: 1.4;
   border-radius: 10px;
   font-weight: 600;

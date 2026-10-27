@@ -217,8 +217,6 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.86rem;
   font-weight: 600;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
@@ -226,7 +224,7 @@
 .floating-pill-badge:hover {
   transform: scale(1.08) translateY(-3px) !important;
   border-color: rgba(96, 165, 250, 0.55);
-  background: rgba(26, 34, 54, 0.92);
+  background: #1a2236;
   color: #ffffff;
   box-shadow: 0 0 25px rgba(59, 130, 246, 0.35);
   z-index: 10;
@@ -236,7 +234,7 @@
 .pill-uiux {
   top: 14%;
   left: 36%;
-  background: rgba(22, 28, 45, 0.85);
+  background: #161c2d;
   border: 1px solid rgba(96, 165, 250, 0.45);
   color: #93c5fd;
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
@@ -252,7 +250,7 @@
 .pill-flutter {
   top: 38%;
   left: 8%;
-  background: rgba(18, 20, 26, 0.8);
+  background: #12141a;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #cbd5e1;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -263,7 +261,7 @@
 .pill-crossplatform {
   bottom: 18%;
   left: 42%;
-  background: rgba(18, 20, 26, 0.8);
+  background: #12141a;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #cbd5e1;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -274,7 +272,7 @@
 .pill-animations {
   bottom: 8%;
   left: 14%;
-  background: rgba(18, 20, 26, 0.8);
+  background: #12141a;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #cbd5e1;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -341,14 +339,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.48rem 1.35rem;
+  padding: 0.38rem 1.25rem;
   line-height: 1.4;
   background: #ffffff;
   color: #090a0f;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   transition: all var(--transition-fast);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.12);
@@ -369,8 +367,8 @@
   justify-content: center;
   width: 38px;
   height: 38px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  background: #151821;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #cbd5e1;
   font-size: 1.1rem;
@@ -452,7 +450,7 @@ footer {
 .footer-socials a {
   width: 38px;
   height: 38px;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   display: flex;

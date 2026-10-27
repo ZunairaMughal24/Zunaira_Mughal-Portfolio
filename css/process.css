@@ -1,0 +1,197 @@
+.process-section {
+  background: #07080c;
+  padding: 6.5rem 4.5%;
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(480px, 1.35fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+}
+
+.process-intro {
+  align-self: start;
+}
+
+.process-title {
+  max-width: 520px;
+  margin: 1rem 0 1.5rem;
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.process-title span {
+  display: block;
+  color: #b8c2d1;
+  font-style: italic;
+  font-weight: 450;
+}
+
+.process-intro > p {
+  max-width: 470px;
+  color: #b8c2d1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.process-list {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  list-style: none;
+}
+
+.process-list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  min-height: 72px;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: default;
+  outline: none;
+  transition: padding 0.3s ease;
+}
+
+.process-list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(-2rem - 4px);
+  width: 7px;
+  height: 7px;
+  border: 2px solid #07080c;
+  border-radius: 50%;
+  background: #4b5563;
+  opacity: 0;
+  transform: translateY(-50%) scale(0.65);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.process-list li:hover::before,
+.process-list li:focus-visible::before,
+.process-list li:focus-within::before {
+  background: #fb7185;
+  box-shadow: 0 0 0 4px rgba(251, 113, 133, 0.12), 0 0 14px rgba(251, 113, 133, 0.7);
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.process-number {
+  color: #fb7185;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.process-list h3 {
+  margin: 0;
+  color: #7f8490;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  transition: color 0.25s ease;
+}
+
+.process-meta {
+  margin: 0;
+  color: #666b75;
+  font-size: 0.82rem;
+  font-style: italic;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.process-description {
+  grid-column: 2 / 4;
+  max-width: 540px;
+  max-height: 0;
+  margin: -0.65rem 0 0;
+  overflow: hidden;
+  color: #b8c2d1;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: max-height 0.35s ease, margin 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
+}
+
+.process-list li:hover,
+.process-list li:focus-visible,
+.process-list li:focus-within {
+  padding: 0.7rem 0 0.9rem;
+}
+
+.process-list li:hover h3,
+.process-list li:focus-visible h3,
+.process-list li:focus-within h3 {
+  color: var(--white);
+}
+
+.process-list li:hover .process-number,
+.process-list li:focus-visible .process-number,
+.process-list li:focus-within .process-number,
+.process-list li:hover .process-meta,
+.process-list li:focus-visible .process-meta,
+.process-list li:focus-within .process-meta {
+  color: #fb7185;
+}
+
+.process-list li:hover .process-description,
+.process-list li:focus-visible .process-description,
+.process-list li:focus-within .process-description {
+  max-height: 5rem;
+  margin-top: -0.25rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .process-layout {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+
+  .process-title {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-section {
+    padding: 5rem 5%;
+  }
+
+  .process-list {
+    padding-left: 1rem;
+  }
+
+  .process-list li::before {
+    left: calc(-1rem - 4px);
+  }
+
+  .process-list li {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.6rem;
+    padding: 1rem 0;
+  }
+
+  .process-meta {
+    grid-column: 2;
+    white-space: normal;
+  }
+
+  .process-description {
+    grid-column: 2;
+  }
+}
