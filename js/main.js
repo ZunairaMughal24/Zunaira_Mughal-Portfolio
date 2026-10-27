@@ -5,6 +5,52 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* Shared site footer */
+  const siteFooter = document.querySelector('footer');
+  if (siteFooter) {
+    siteFooter.innerHTML = `
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-profile">
+            <div class="footer-identity">
+              <img src="assets/favicon.png" alt="Zunaira Mughal" class="footer-avatar">
+              <div>
+                <div class="footer-name">Zunaira Mughal<span>.</span></div>
+                <p>Flutter Developer &amp; Mobile Engineer</p>
+              </div>
+            </div>
+            <p class="footer-summary">Flutter development for founders and teams who value clear communication, thoughtful execution, and dependable results.</p>
+            <p class="footer-location"><span></span>Gujranwala, Pakistan</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Footer sections">
+            <h2>Sections</h2>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#projects">Projects</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Social profiles">
+            <h2>Elsewhere</h2>
+            <a href="https://linkedin.com/in/zunaira-mughal-80637b276" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/ZunairaMughal24" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://stackoverflow.com/users/33055380/zunaira-mughal" target="_blank" rel="noopener noreferrer">Stack Overflow</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Documents and contact">
+            <h2>Documents</h2>
+            <a href="assets/Zunaira_Mughal_Resume.pdf" download>Resume <i class="fa-solid fa-download"></i></a>
+            <a href="mailto:zunairamughal.dev@gmail.com">Email me</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Zunaira Mughal. All rights reserved.</p>
+          <a href="index.html#home">Back to top</a>
+        </div>
+      </div>`;
+  }
+
   /* Services carousel */
   const servicesTrack = document.getElementById('servicesTrack');
   const servicesPrev = document.getElementById('servicesPrev');
@@ -126,14 +172,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]:not(.nav-cta)');
 
+  const navSectionMap = {
+    home: 'home',
+    about: 'about',
+    services: 'services',
+    process: 'services',
+    projects: 'projects',
+    skills: 'projects',
+    testimonials: 'projects',
+    contact: 'projects'
+  };
+
   if ('IntersectionObserver' in window && sections.length > 0 && navAnchors.length > 0) {
     const activeLinkObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
+          const activeNavId = navSectionMap[id];
+          if (!activeNavId) return;
           navAnchors.forEach(a => {
             const href = a.getAttribute('href');
-            if (href === `#${id}`) {
+            if (href === `#${activeNavId}`) {
               a.classList.add('active');
             } else {
               a.classList.remove('active');

@@ -214,15 +214,7 @@
 }
 
 .package-icon {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 1.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #fb7185;
+  display: none;
 }
 
 .package-number {
@@ -241,6 +233,7 @@
 }
 
 .package-card h3 {
+  margin-top: 1.5rem;
   color: var(--white);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.22rem;

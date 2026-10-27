@@ -409,10 +409,10 @@
 ═══════════════════════════════════════════════════════ */
 
 footer {
-  background: var(--bg-subtle);
+  background: #07080c;
   border-top: 1px solid var(--border);
-  padding: 3.2rem 4.5%;
-  text-align: center;
+  padding: 5rem 4.5% 2rem;
+  text-align: left;
   position: relative;
   z-index: 1;
 }
@@ -422,65 +422,165 @@ footer {
   margin: 0 auto;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.5fr) repeat(3, minmax(130px, 0.7fr));
+  gap: clamp(2.5rem, 6vw, 6rem);
+  padding-bottom: 3.5rem;
+}
+
+.footer-profile {
+  max-width: 360px;
+}
+
+.footer-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.35rem;
+}
+
+.footer-avatar {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .footer-name {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--white);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .footer-name span {
   color: var(--pink);
 }
 
-.footer-inner > p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.footer-socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  margin: 1.3rem 0;
-}
-
-.footer-socials a {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  transition: all var(--transition-fast);
-}
-
-.footer-socials a:hover {
-  border-color: var(--pink-border);
-  color: var(--pink-light);
-  background: var(--pink-soft);
-  transform: translateY(-2px);
-}
-
-.footer-copy {
-  color: var(--text-subtle);
+.footer-identity p,
+.footer-summary,
+.footer-location {
+  color: #aeb8c8;
   font-size: 0.82rem;
-  margin-top: 0.7rem;
+  line-height: 1.65;
 }
 
-.footer-copy a {
-  color: var(--pink-light);
-  transition: color var(--transition-fast);
+.footer-summary {
+  max-width: 44ch;
+  margin-bottom: 1rem;
 }
 
-.footer-copy a:hover {
-  color: var(--pink);
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.footer-location span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fb7185;
+  box-shadow: 0 0 10px rgba(251, 113, 133, 0.65);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.footer-column h2 {
+  margin: 0 0 0.55rem;
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-column a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #b8c2d1;
+  font-size: 0.84rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-column a i {
+  color: #6b7280;
+  font-size: 0.65rem;
+}
+
+.footer-column a:hover {
+  color: #fb7185;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #7f8998;
+  font-size: 0.82rem;
+}
+
+.footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #aeb8c8;
+}
+
+.footer-bottom a:hover {
+  color: #fb7185;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr repeat(2, 1fr);
+  }
+
+  .footer-column:last-child {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding-top: 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1.5rem;
+  }
+
+  .footer-profile {
+    grid-column: 1 / -1;
+  }
+
+  .footer-column:last-child {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════
