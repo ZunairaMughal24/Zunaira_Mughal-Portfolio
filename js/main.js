@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Flutter Developer &amp; Mobile Engineer</p>
               </div>
             </div>
-            <p class="footer-summary">Flutter development for founders and teams who value clear communication, thoughtful execution, and dependable results.</p>
+            <p class="footer-summary">I help clients shape and ship mobile products, while giving development teams clean Flutter code they can confidently build on.</p>
             <p class="footer-location"><span></span>Gujranwala, Pakistan</p>
           </div>
 
